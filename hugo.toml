@@ -9,7 +9,7 @@ theme = 'hugo-theme-hello-friend-ng'
 
 [[params.social]]
   name = "hackthebox"
-  url = "https://app.hackthebox.com/users/1101181?profile-top-tab=machines&ownership-period=1M&profile-bottom-tab=prolabs"
+  url = "https://app.hackthebox.com/users/1101181"
 
 [[params.social]]
   name = "medium"
