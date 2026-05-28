@@ -4,7 +4,7 @@ title = 'Freedie | Pentesting Lab Writeups'
 theme = 'hugo-theme-hello-friend-ng'
 
 [[params.social]]
-  name = "https://feathericons.com/?query=linked"
+  name = "linkedin"
   url = "https://www.linkedin.com/in/freedie/"
 
 [[menu.main]]
