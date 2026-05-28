@@ -28,9 +28,9 @@ theme = 'hugo-theme-hello-friend-ng'
   url = "hiroto"
 
 [[menu.main]]
-  identifier = "writeups"
-  name = "Writeups"
-  url = "/posts/"
+  identifier = "HTB writeups"
+  name = "HTB Writeups"
+  url = "/Hack The Box/"
   weight = 10
 
 [[menu.main]]
