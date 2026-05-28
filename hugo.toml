@@ -20,6 +20,10 @@ theme = 'hugo-theme-hello-friend-ng'
   url = "https://tryhackme.com/p/Freedie"
 
 [[params.social]]
+  name = "email"
+  url = "mailto:fhftse@uwaterloo.ca"
+
+[[params.social]]
   name = "discord"
   url = "hiroto"
 
