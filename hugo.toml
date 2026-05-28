@@ -1,4 +1,18 @@
-baseURL = 'https://freedie.org/'
-locale = 'en-us'
-title = 'Freedie Tse | Security Writeups'
-theme = 'hugo-theme-hello-friend-ng'
+[languages]
+  [languages.en]
+    title = "Freedie Tse | Pentesting Lab Writeups"
+    
+    [languages.en.params]
+      subtitle = "Penetration testing notes and writeups"
+    
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      name = "Posts"
+      url = "/posts/"
+      weight = 10
+    
+    [[languages.en.menu.main]]
+      identifier = "about"
+      name = "About"
+      url = "/about/"
+      weight = 20
