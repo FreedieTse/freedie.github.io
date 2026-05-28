@@ -1,0 +1,4 @@
+baseURL = 'https://freedie.org/'
+locale = 'en-us'
+title = 'Freedie Tse | Security Writeups'
+theme = 'hugo-theme-hello-friend-ng'

@@ -4,8 +4,8 @@ title = 'Freedie | Pentesting Lab Writeups'
 theme = 'hugo-theme-hello-friend-ng'
 
 [[menu.main]]
-  identifier = "posts"
-  name = "Posts"
+  identifier = "writeups"
+  name = "Writeups"
   url = "/posts/"
   weight = 10
 
