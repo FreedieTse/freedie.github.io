@@ -1,6 +1,10 @@
 [languages]
   [languages.en]
+    baseURL = 'https://freedie.org/'
     title = "Freedie Tse | Pentesting Lab Writeups"
+    locale = 'en-us'
+    theme = 'hugo-theme-hello-friend-ng'
+
     
     [languages.en.params]
       subtitle = "Penetration testing notes and writeups"
