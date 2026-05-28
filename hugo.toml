@@ -1,22 +1,16 @@
-[languages]
-  [languages.en]
-    baseURL = 'https://freedie.org/'
-    title = "Freedie Tse | Pentesting Lab Writeups"
-    locale = 'en-us'
-    theme = 'hugo-theme-hello-friend-ng'
+baseURL = 'https://freedie.org/'
+languageCode = 'en-us'
+title = 'Freedie | Pentesting Lab Writeups'
+theme = 'hugo-theme-hello-friend-ng'
 
-    
-    [languages.en.params]
-      subtitle = "Penetration testing notes and writeups"
-    
-    [[languages.en.menu.main]]
-      identifier = "posts"
-      name = "Posts"
-      url = "/posts/"
-      weight = 10
-    
-    [[languages.en.menu.main]]
-      identifier = "about"
-      name = "About"
-      url = "/about/"
-      weight = 20
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 20
