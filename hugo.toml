@@ -30,11 +30,23 @@ theme = 'hugo-theme-hello-friend-ng'
 [[menu.main]]
   identifier = "HTB Writeups"
   name = "HTB Writeups"
-  url = "/htb_writeups/"	
+  url = "/htb-writeups/"
   weight = 10
 
 [[menu.main]]
-  identifier = "about"
+  identifier = "About"
   name = "About"
   url = "/about/"
   weight = 20
+
+[[menu.main]]
+  identifier = "Blogs"
+  name = "Blogs"
+  url = "/blogs/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "Tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 40

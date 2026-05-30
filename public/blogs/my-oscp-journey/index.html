@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Background For context, I have no prior work experience to pentesting or cybersecurity other than my CompTIA Secucirty&#43; certification, but I have some programming background mostly in Java, C, C&#43;&#43; and Python. I am graduating in June of 2026 from University of Waterloo with a major in Mathematics and a minor in computing (basically computer science). I got my CompTIA Security&#43; in mid September, 2025 after studying for two weeks. Then completed my Cisco CCNA in late October of 2025 after studying for a month. After earning my Cisco CCNA, I started studying for my school final exams, and finally I started officially studying the PWK 200 course in late December, 2025.
+" />
+<meta name="keywords" content=", oscp, certifications, offsec" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://localhost:1313/blogs/my-oscp-journey/" />
+
+
+    <title>
+        
+            From Failing with 0 Points to 100 Points in 7 Hours :: Freedie | Pentesting Lab Writeups 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.7289daf2e88ea2c7b253a51cc5794c7cc17e7aeb7295a19d978db764a5862f25.css" integrity="sha256-cona8uiOoseyU6UcxXlMfMF&#43;eutylaGdl423ZKWGLyU=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="From Failing with 0 Points to 100 Points in 7 Hours">
+  <meta itemprop="description" content="Background For context, I have no prior work experience to pentesting or cybersecurity other than my CompTIA Secucirty&#43; certification, but I have some programming background mostly in Java, C, C&#43;&#43; and Python. I am graduating in June of 2026 from University of Waterloo with a major in Mathematics and a minor in computing (basically computer science). I got my CompTIA Security&#43; in mid September, 2025 after studying for two weeks. Then completed my Cisco CCNA in late October of 2025 after studying for a month. After earning my Cisco CCNA, I started studying for my school final exams, and finally I started officially studying the PWK 200 course in late December, 2025.">
+  <meta itemprop="datePublished" content="2026-05-30T15:09:26-04:00">
+  <meta itemprop="dateModified" content="2026-05-30T15:09:26-04:00">
+  <meta itemprop="wordCount" content="1526">
+  <meta itemprop="keywords" content="Oscp,Certifications,Offsec">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="From Failing with 0 Points to 100 Points in 7 Hours">
+  <meta name="twitter:description" content="Background For context, I have no prior work experience to pentesting or cybersecurity other than my CompTIA Secucirty&#43; certification, but I have some programming background mostly in Java, C, C&#43;&#43; and Python. I am graduating in June of 2026 from University of Waterloo with a major in Mathematics and a minor in computing (basically computer science). I got my CompTIA Security&#43; in mid September, 2025 after studying for two weeks. Then completed my Cisco CCNA in late October of 2025 after studying for a month. After earning my Cisco CCNA, I started studying for my school final exams, and finally I started officially studying the PWK 200 course in late December, 2025.">
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2026-05-30 15:09:26 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                hello</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner">
+                <li><a href="/about/">About</a></li>
+            
+                <li><a href="/blogs/">Blogs</a></li>
+            
+                <li><a href="/htb-writeups/">HTB Writeups</a></li>
+            
+                <li><a href="/tags/">Tags</a></li>
+            
+    </ul>
+</nav>
+
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+        </span>
+    </span>
+</header>
+
+
+            
+    <div class="content">
+        <main class="post">
+
+            <div class="post-info">
+                
+                </p>
+            </div>
+
+            <article>
+                <h2 class="post-title"><a href="http://localhost:1313/blogs/my-oscp-journey/">From Failing with 0 Points to 100 Points in 7 Hours</a></h2>
+
+                
+                
+                
+
+                <div class="post-content">
+                    <h1 id="background">Background</h1>
+<p>For context, <strong>I have no prior work experience to pentesting</strong> or cybersecurity other than my CompTIA Secucirty+ certification, but I have some programming background mostly in Java, C, C++ and Python. I am graduating in June of 2026 from University of Waterloo with a major in Mathematics and a minor in computing (basically computer science). I got my <strong>CompTIA Security+</strong> in mid September, 2025 after studying for two weeks. Then completed my <strong>Cisco CCNA</strong> in late October of 2025 after studying for a month. After earning my Cisco CCNA, I started studying for my school final exams, and finally <strong>I started officially studying the PWK 200 course in late December, 2025.</strong></p>
+<hr>
+<h1 id="fails">Fails</h1>
+<p>I booked my first OSCP attempt on Janurary 16th, 2026. <strong>To prepare well for OSCP</strong>, <em>we must “reconnaissance” on the exam structure</em>: I first researched about the current OSCP exam on reddit, appearantly the intermediate to hard level Proving Grounds Practice (platform by OffSec, also known as PGP) labs from <a href="https://docs.google.com/spreadsheets/d/18weuz_Eeynr6sXFQ87Cd5F0slOj9Z6rt/">LainKusanagi’s OSCP Like List</a> was the closest to actual OSCP. <em>Sections like AWS, Antivirus Evasions were not part of the exam</em>. Analyzing the OSCP exam: <strong>to pass the exam I need 70 out of 100 points</strong>. The OSCP exam has an assumed breach Active Directory (AD) set with one given credentials that is worth 40 marks in total, and 3 stand-alones that I initially thought were all linux for some reason, each worth 20 points. <strong>So to pass the exam, I needed at least 10 points on AD and root all of the stand-alones, or root the whole AD set and get 30 points split among the stand-alones</strong>.
+<img src="https://manage.offsec.com/wp-content/uploads/2023/02/image1-1.png" alt="">
+My strategy when preparing for the first OSCP exam was <strong>simple</strong>: go over all of the PWK 200 course reading that was relevant to the exam (<strong>skipping the irrelevant sections</strong>) and add the methodologies that I saw in to my methodology, but <strong>I recommend spending more time on the course content and labs</strong>. Then after going over the PWK 200 course quickly, I started getting hands-on experience from of all the easy to hard labs of PGP, and refining my methodology. I rushed through around 4 to 5 labs labs per day, which was not a good idea. <strong>However, I learned that looking at walkthroughs is not bad at all, but you need to try everything you know first. Learn and digest what you were lacking from.</strong></p>
+<p>On my first OSCP exam attempt: I got local admin on the first Windows machine in the AD set within 10 minutes, but got stuck for 4 hours before trying the stand-alones and also got initial access on the first stand-alone in 10 minutes. So now, I knew to pass the exam I had to either get root on the first stand-alone, or get more points on the AD set. However, I never got further. I <strong>failed the first attempt</strong>, with <em>only 20 points</em>.</p>
+<p><img src="https://cdn.shopify.com/s/files/1/0306/6419/6141/files/Copy_of_fail_1024x1024.png?v=1617976957" alt=""></p>
+<p><strong>Surprisingly</strong>, I was excited after my failure from my first attempt. <strong>I know that there is so much more that I can learn</strong>. Then I arranged my second attempt on February 22nd, 2026. This time, <strong>I finished all of the Proving Grounds Practice labs on LainKusanagi’s List</strong>, and took detailed notes over them while adding to my methodology. To prepare better for AD: I completed most of the AD boxes from Hack The Box on LainKusanagi’s List and also watching over the walkthroughs of AD Chains from Hacker Blueprint. In addition, I skimmed through <a href="https://0xdf.gitlab.io/">0xdf writeups</a> of all of the Hack The Box machines from LainKusanagi’s List, and watching some of <a href="https://www.youtube.com/@ippsec/videos">IppSec</a> videos.</p>
+<p>Honestly, looking back from now, I had enough skills to pass the OSCP exam. But <strong>I failed, <em>with 0 points</em></strong>. This was mainly because I reached the “<em><strong>cybersecurity burnout</strong></em>” due to the massive amount of training. When I was doing the labs near end of my preparation, I <strong>stopped actively thinking</strong> and hoping that they had simple exploits; when my insight did not work, I was not able to pivot to another strategy, but rather getting depressed. I never thought this would happen to me, but <strong>I know that I needed to take a break</strong>. I went on a trip for 2 weeks, doing absolute nothing from cyber security.</p>
+<hr>
+<h1 id="acing-the-oscp">Acing the OSCP</h1>
+<p>I started studying for the OSCP again after finishing my last final on April 26th. This time I have arranged my OSCP exam on May the 26th, leaving my self a little more time to practice for the exam. First thing that I did, which I spend 3 days on that saved me so much time on the exam: <strong>I organized my notes</strong> to a more structued and logical workflow. For example, for AD and Windows enumeration, I ordered a workflow starting with:</p>
+<ul>
+<li><strong>Unauthenticated</strong>: such as sync my kali time with the AD DC, adding target IPs and host names into <code>/etc/hosts</code>, NTLM capture, etc.</li>
+<li><strong>Authenticated without Shell</strong>: such as make an <code>ips</code> list file to enumerate multiple host with <code>netexec</code>, enumerate open ports, etc.</li>
+<li><strong>Shell with Low Privilege User</strong>: such as pivoting with <code>ligolo-ng</code>, trying to do local privilege escalation, or search for credentials, etc.</li>
+<li><strong>After Privilege Escalation</strong>: add a user as admin and then dump credentials with <code>netexec</code>, search for credentials, etc.</li>
+</ul>
+<p>The new structured notes helped me <em>visualize</em> my methodology in a more <strong>logical workflow</strong> such that: I know if I couldn’t get further access after trying my methodology twice or three times, then it might not be something that I missed and I should start getting <strong>creative</strong>.
+<img src="https://www.netexec.wiki/~gitbook/image?url=https%3A%2F%2F361548579-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252Fb0qbsNvsXjRTsQcNipGM%252Fuploads%252Fgit-blob-aa8c6676dd772f8004894c5e770b8135a230244d%252FNetExec-Logo-Color.png%3Falt%3Dmedia&amp;width=1248&amp;dpr=3&amp;quality=100&amp;sign=f7085d8f&amp;sv=2" alt="">
+Since I was weak on stand-alones, I decided to practice on Virtual Hacking Labs. To be honest, <strong>VHL</strong> is very <strong>underated</strong> but quite <em>expensive</em> (<em>$99/month</em>). Even though there are some kernel exploits (rare on the OSCP) but the practice <strong>deepened my Linux understanding</strong> (<em>especially privilege escalation techniques such as utilizing different capabilities that are <strong>not</strong> on GTFOBins</em>). During this time, I <strong>reached out to LainKusanagi via discord</strong>, he is so kind and taught tips and tricks that are very helpful to the OSCP exam.
+I also practiced on some labs from <strong>HackSmarter</strong> which are <strong>very high quality</strong>. On the other hand, the <strong>Hacker Blueprint’s AD Chains</strong> taught me a handful of methodologies that was <strong>very helpful during my OSCP exam</strong>.</p>
+<p>On my third exam day, I tried to join exam at exam time at 1 PM but it turned out the time zone that my exam was arranged was different than my actual time zone, so my exam did not starting until 6 PM. I was really frustrated, but decided that I should save my energy until 6 PM so I layed on bed doing the minimal thinking and energy consuming thing like listening to music and taking a nap.</p>
+<p><img src="https://media.licdn.com/dms/image/v2/C4E12AQHSpA_ny4uh3w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1615816513305?e=2147483647&amp;v=beta&amp;t=oKyf7sXa1P-ZWP2-KA3HHHDrX0m2SCZVDvWtp-DH8PI" alt=""></p>
+<p>At 6 PM I started my third attempt of OSCP: I couldn’t manage to get local admin until 1 hour in, but since I was enumerating the during that 1 hour too, <strong>I rooted the whole AD set at 8 PM after 2 hours of starting the exam</strong>. Then I took a break and went to get dinner.</p>
+<p>After I was back from dinner, I rooted the first stand-alone within an hour. I encountered <strong>unfamiliarities</strong>, but with googling and the help of <a href="https://hacktricks.wiki/en/index.html">hacktricks</a> and <a href="https://hackviser.com/tactics/pentesting">hackviser</a>, I was able to learn during the exam. At this point, I had 60 points already, so <em>I just needed 10 points to pass the exam</em>. However, I was fell in rabbit hole and did not find a way into the 2nd or 3rd stand-alone. <strong>I was stuck for 2 hours</strong> without and progress and just as I thought I might fail with 60 points, I thought I should re-enumerate all the ports again.</p>
+<p>Somehow, <strong>after this re-enumeration</strong>, I found a way in stand-alone 2 <strong>within 10 minutes</strong> and the privilege escalation also took me under 10 minutes too. Before I went back to the stand-alone 3, <strong>I had already passed the exam with 80 points</strong>. Therefore I told myself I could give 100 points a try, and with a little bit of luck, I found a set of keys that allowed me to proceed to root the last stand-alone within 30 minutes after rooting the second.</p>
+<hr>
+<h1 id="the-beginning">The Beginning</h1>
+<p>To this day I still cannot believe <strong>I got 100 points on OSCP under 7 hours</strong>, in which I consider pretty fast, being dramatically different from getting 0 points on the second attempt too.</p>
+<p>Throughout this journey, I had a lot of <em>struggles</em>, but <strong>I overcame them and became the better of me</strong>. This is not the end of my journey as I got even more addicted to improving my skills during the journey. I will be practicing more of my skills on the Hack The Box platform from now, but I will go back to the OffSec platform soon after to learn even more. Thank you for those that have read this far from my first post!</p>
+<p>P.S.
+This post is more of a journal-style post, but I will be posting a detailed list of tips for OSCP that I think you should add to your methodology list soon. Hopefully this would help any of you preparing for the OSCP in the future!</p>
+
+                </div>
+            </article>
+
+            <hr />
+
+            <div class="post-info">
+                
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="http://localhost:1313/tags/oscp/">oscp</a></span>
+        <span class="tag"><a href="http://localhost:1313/tags/certifications/">certifications</a></span>
+        <span class="tag"><a href="http://localhost:1313/tags/offsec/">offsec</a></span>
+        
+    </p>
+
+                
+            </div>
+        </main>
+    </div>
+
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.08b680078a3cf9c69e3dd217a5aa52cfddd4a1d850f8cdff127fdd7421a71f8b2b474be69386f67819edace92273916e7230c9054f38107db9dc6730b3530ab5.js" integrity="sha512-CLaAB4o8&#43;caePdIXpapSz93UodhQ&#43;M3/En/ddCGnH4srR0vmk4b2eBntrOkic5FucjDJBU84EH253Gcws1MKtQ=="></script>
+
+
+
+
+    </body>
+</html>
