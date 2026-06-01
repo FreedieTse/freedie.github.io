@@ -6,14 +6,21 @@
     <description>Recent content in Offsec on Freedie | Pentesting Lab Writeups</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2026 15:09:26 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 00:50:23 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/offsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OSCP Tips and Tricks</title>
+      <link>http://localhost:1313/blogs/oscp-tips-and-tricks/</link>
+      <pubDate>Mon, 01 Jun 2026 00:50:23 -0400</pubDate>
+      <guid>http://localhost:1313/blogs/oscp-tips-and-tricks/</guid>
+      <description>&lt;p&gt;Hello! I am sure you want to ACE the OSCP like I did! And even beat my personal record of getting 100 on OSCP in under 7 hours, and I truly believe any one of you have the potential to smash the OSCP exam harder and better than I did.&lt;/p&gt;&#xA;&lt;p&gt;I am sure there are very good guides and tricks out there already and I will try to cover some of the tips and tricks that I haven&amp;rsquo;t seen or found very important throughout my OSCP journey, hope this will help you pass the OSCP exam!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>From Failing with 0 Points to 100 Points in 7 Hours</title>
       <link>http://localhost:1313/blogs/my-oscp-journey/</link>
       <pubDate>Sat, 30 May 2026 15:09:26 -0400</pubDate>
       <guid>http://localhost:1313/blogs/my-oscp-journey/</guid>
-      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;&#xA;&lt;p&gt;For context, &lt;strong&gt;I have no prior work experience to pentesting&lt;/strong&gt; or cybersecurity other than my CompTIA Secucirty+ certification, but I have some programming background mostly in Java, C, C++ and Python. I am graduating in June of 2026 from University of Waterloo with a major in Mathematics and a minor in computing (basically computer science). I got my &lt;strong&gt;CompTIA Security+&lt;/strong&gt; in mid September, 2025 after studying for two weeks. Then completed my &lt;strong&gt;Cisco CCNA&lt;/strong&gt; in late October of 2025 after studying for a month. After earning my Cisco CCNA, I started studying for my school final exams, and finally &lt;strong&gt;I started officially studying the PWK 200 course in late December, 2025.&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;&#xA;&lt;p&gt;For context, &lt;strong&gt;I have no prior work experience to pentesting&lt;/strong&gt; or cybersecurity other than my CompTIA Secucirty+ certification, but I have some programming background mostly in Java, C, C++ and Python. I am graduating in June of 2026 from University of Waterloo with a major in Mathematics and a minor in computing (basically computer science). I got my &lt;strong&gt;CompTIA Security+&lt;/strong&gt; in mid September, 2025 after studying for two weeks. Then completed my &lt;strong&gt;Cisco CCNA&lt;/strong&gt; in late October of 2025 after studying for a month. After earning my Cisco CCNA, I started studying for my school final exams, and finally &lt;strong&gt;I started officially studying the PEN-200 course in late December, 2025.&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
