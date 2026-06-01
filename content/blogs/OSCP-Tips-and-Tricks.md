@@ -8,6 +8,8 @@ Hello! I am sure you want to ACE the OSCP like I did! And even beat my personal 
 
 I am sure there are very good guides and tricks out there already and I will try to cover some of the tips and tricks that I haven't seen or found very important throughout my OSCP journey, hope this will help you pass the OSCP exam!
 
+![](https://media.licdn.com/dms/image/v2/D4E22AQHsXauXZltUtQ/feedshare-shrink_1280/B4EZ5wXVb7K0AU-/0/1780001626210?e=1781740800&v=beta&t=77w4JnMX376_BFT4C6yU67AnhtzD2g6ex7Wzg7gMrFo)
+
 This blog may be very lengthy, for your convenience, this is the list of contents:
 
 [Resources](#resources)
