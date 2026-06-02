@@ -4,12 +4,14 @@ draft = false
 title = 'HTB Writeups'
 +++
 
-# Easy Boxes
-- ### [Help](/htb-writeups/help): Linux
+### Easy Boxes
+- [Help](/htb-writeups/help): Linux
 
-# Medium Boxes
+### Medium Boxes
+To be added
 
-# Hard Boxes
+#### Hard Boxes
+To be added
 
-# Insane Boxes
-
+### Insane Boxes
+To be added
