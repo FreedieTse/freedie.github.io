@@ -5,7 +5,7 @@ title = 'HTB Writeups'
 +++
 
 # Easy Boxes
-- ### [Help](/htb-writeups/help)
+- ### [Help](/htb-writeups/help): Linux
 
 # Medium Boxes
 

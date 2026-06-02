@@ -45,12 +45,6 @@ theme = 'hugo-theme-hello-friend-ng'
   url = "/blogs/"
   weight = 30
 
-[[menu.main]]
-  identifier = "Tags"
-  name = "Tags"
-  url = "/tags/"
-  weight = 40
-
 [markup]
   [markup.highlight]
     style = "dracula"

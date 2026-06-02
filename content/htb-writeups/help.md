@@ -1,8 +1,9 @@
 +++
 date = '2026-06-01T23:49:11-04:00'
 title = 'Help'
+tags = ["htb", "easy", "sqli","kernel exploit","repeat"]
 +++
-	
+
 ``` IP
 10.129.230.159
 ```
@@ -15,7 +16,7 @@ title = 'Help'
 
 
 ---
-# Attack + Enum Vectors: (Ports, etc.) Check HTTP Enum Metho
+# Attack + Enum Vectors:
 TCP 3000: HTTP; Node.js Express framework?
 TCP 80: HTTP: Apache 2.4.18
 
@@ -24,7 +25,7 @@ TCP 22: SSH
 UDP 161: closed
 
 ---
-# `nmap` results: scan twice (esp winRM)
+# `nmap` results:
 ```
 # Nmap 7.99 scan initiated Mon Jun  1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159
 Nmap scan report for 10.129.230.159
