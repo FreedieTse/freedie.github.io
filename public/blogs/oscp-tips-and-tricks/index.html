@@ -17,7 +17,7 @@ I am sure there are very good guides and tricks out there already and I will try
 
     <title>
         
-            OSCP Tips and Tricks :: Freedie | Pentesting Lab Writeups 
+            OSCP Tips and Tricks :: Freedie | Pentration Testing Lab Writeups 
         
     </title>
 
@@ -62,6 +62,65 @@ I am sure there are very good guides and tricks out there already and I will try
 
 
 
+<style>
+  pre {
+    overflow-x: auto;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+  pre code {
+    white-space: pre;        
+  }
+   
+  code {
+    padding: 0.15rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('pre').forEach(function (block) {
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', function () {
+      const code = block.querySelector('code') || block;
+      navigator.clipboard.writeText(code.innerText).then(function () {
+        btn.textContent = 'Copied!';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+      });
+    });
+    block.style.position = 'relative';
+    block.appendChild(btn);
+  });
+});
+</script>
+<style>
+  .copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.1);
+    color: #ccc;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+  pre:hover .copy-btn { opacity: 1; }
+  .copy-btn:hover { background: rgba(255,255,255,0.2); }
+</style>
+
+<style>
+  body .container { justify-content: flex-start !important; }
+</style>
 
 
 
@@ -138,6 +197,7 @@ I am sure there are very good guides and tricks out there already and I will try
                 <div class="post-content">
                     <p>Hello! I am sure you want to ACE the OSCP like I did! And even beat my personal record of getting 100 on OSCP in under 7 hours, and I truly believe any one of you have the potential to smash the OSCP exam harder and better than I did.</p>
 <p>I am sure there are very good guides and tricks out there already and I will try to cover some of the tips and tricks that I haven&rsquo;t seen or found very important throughout my OSCP journey, hope this will help you pass the OSCP exam!</p>
+<p><img src="https://media.licdn.com/dms/image/v2/D4E22AQHsXauXZltUtQ/feedshare-shrink_1280/B4EZ5wXVb7K0AU-/0/1780001626210?e=1781740800&amp;v=beta&amp;t=77w4JnMX376_BFT4C6yU67AnhtzD2g6ex7Wzg7gMrFo" alt=""></p>
 <p>This blog may be very lengthy, for your convenience, this is the list of contents:</p>
 <p><a href="#resources">Resources</a></p>
 <ul>
@@ -275,10 +335,10 @@ Note that: sometimes the exploit could still work for <strong>service numbers th
 <li>Look at the source code of pages that doesn&rsquo;t look like popular web services (such as Wordpress, Joomla, Jenkins, etc.) and look for hints for credentials or any clues, think of it as you are playing a detective game. If there are domain name information such as <code>test.htb</code>, add that in your <code>/etc/hosts</code> file and enumerate for subdomains with <code>ffuf</code> or <code>gobuster vhosts</code></li>
 <li>Leverage <code>nikto</code> if needed, I personally didn&rsquo;t find it too interesting. However, it can yield results for hints to initial access sometimes.</li>
 <li>When enumerating a popular/well known web service, we can enumerate with their corresponding wordlists from seclists. e.g. we can search apache wordlists by
-<pre tabindex="0"><code>ls -R /usr/share/wordlists/seclists/Discovery/Web-Content | grep -i &#34;apache&#34;
-</code></pre>and we can find the corresponding wordlist by
-<pre tabindex="0"><code>locate Apache.txt
-</code></pre>then we can use that wordlists with <code>gobuster</code> or <code>ffuf</code></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ls -R /usr/share/wordlists/seclists/Discovery/Web-Content | grep -i &#34;apache&#34;
+</span></span></code></pre></div>and we can find the corresponding wordlist by
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>locate Apache.txt
+</span></span></code></pre></div>then we can use that wordlists with <code>gobuster</code> or <code>ffuf</code></li>
 <li>If the target webservice has <code>.git</code>, we can use <a href="https://github.com/arthaud/git-dumper"><code>git-dumper</code></a> to dump git repositories which can leak crucial information</li>
 <li>When testing for LFI vulnerabilities, try doing a lot of <code>../</code> in requests with parameters such as <code>?view=</code> or <code>?page=</code></li>
 <li>When enumerating for Windows IIS servers, try enumerating with <code>.aspx</code> and <code>.asp</code> if you can&rsquo;t find anything with <code>.php</code> extensions in <code>gobuster</code>

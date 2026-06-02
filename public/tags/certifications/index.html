@@ -15,7 +15,7 @@
 
     <title>
         
-            Certifications :: Freedie | Pentesting Lab Writeups 
+            Certifications :: Freedie | Pentration Testing Lab Writeups 
         
     </title>
 
@@ -49,10 +49,69 @@
 
 
 
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/certifications/index.xml" title="Freedie | Pentesting Lab Writeups" />
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/certifications/index.xml" title="Freedie | Pentration Testing Lab Writeups" />
 
 
 
+<style>
+  pre {
+    overflow-x: auto;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    line-height: 1.5;
+    font-size: 0.9rem;
+  }
+  pre code {
+    white-space: pre;        
+  }
+   
+  code {
+    padding: 0.15rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('pre').forEach(function (block) {
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', function () {
+      const code = block.querySelector('code') || block;
+      navigator.clipboard.writeText(code.innerText).then(function () {
+        btn.textContent = 'Copied!';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+      });
+    });
+    block.style.position = 'relative';
+    block.appendChild(btn);
+  });
+});
+</script>
+<style>
+  .copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.1);
+    color: #ccc;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+  pre:hover .copy-btn { opacity: 1; }
+  .copy-btn:hover { background: rgba(255,255,255,0.2); }
+</style>
+
+<style>
+  body .container { justify-content: flex-start !important; }
+</style>
 
 
 
@@ -111,54 +170,12 @@
 
 
             
+<div class="post">
+  <h1 class="post-title">Certifications</h1>
+  <div class="post-content">
     
-
-    <div class="content">
-        <main class="posts">
-            <h1>Certifications</h1>
-
-            
-
-            
-                <div class="posts-group">
-                    <div class="post-year">2026</div>
-
-                    <ul class="posts-list">
-                        
-                            <li class="post-item">
-                                <a href="http://localhost:1313/blogs/oscp-tips-and-tricks/" class="post-item-inner">
-                                    <span class="post-title">OSCP Tips and Tricks</span>
-                                    <span class="post-day">
-                                        
-                                            Jun 1
-                                        
-                                    </span>
-                                </a>
-                            </li>
-                        
-                            <li class="post-item">
-                                <a href="http://localhost:1313/blogs/my-oscp-journey/" class="post-item-inner">
-                                    <span class="post-title">From Failing with 0 Points to 100 Points in 7 Hours</span>
-                                    <span class="post-day">
-                                        
-                                            May 30
-                                        
-                                    </span>
-                                </a>
-                            </li>
-                        
-                    </ul>
-                </div>
-            
-        <div class="pagination">
-    <div class="pagination__buttons">
-        
-        
-    </div>
+  </div>
 </div>
-
-        </main>
-    </div>
 
 
             

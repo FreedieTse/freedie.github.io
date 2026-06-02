@@ -1,6 +1,6 @@
 baseURL = 'https://freedie.org/'
 languageCode = 'en-us'
-title = 'Freedie | Pentesting Lab Writeups'
+title = 'Freedie | Pentration Testing Lab Writeups'
 theme = 'hugo-theme-hello-friend-ng'
 
 [[params.social]]
@@ -50,3 +50,11 @@ theme = 'hugo-theme-hello-friend-ng'
   name = "Tags"
   url = "/tags/"
   weight = 40
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+    tabWidth = 2
+    guessSyntax = true
+    noClasses = true
