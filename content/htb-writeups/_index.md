@@ -6,6 +6,7 @@ title = 'HTB Writeups'
 
 ### Easy Boxes
 - [Help](/htb-writeups/help): Linux
+- [Irked](/htb-writeups/irked): Linux
 
 ### Medium Boxes
 To be added
