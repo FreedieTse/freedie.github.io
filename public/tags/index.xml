@@ -6,20 +6,55 @@
     <description>Recent content in Tags on Freedie | Pentration Testing Lab Writeups</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2026 23:49:11 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 10:50:00 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cronjobs</title>
+      <link>http://localhost:1313/tags/cronjobs/</link>
+      <pubDate>Wed, 03 Jun 2026 10:50:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/cronjobs/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Easy</title>
       <link>http://localhost:1313/tags/easy/</link>
-      <pubDate>Mon, 01 Jun 2026 23:49:11 -0400</pubDate>
+      <pubDate>Wed, 03 Jun 2026 10:50:00 -0400</pubDate>
       <guid>http://localhost:1313/tags/easy/</guid>
       <description></description>
     </item>
     <item>
       <title>Htb</title>
       <link>http://localhost:1313/tags/htb/</link>
-      <pubDate>Mon, 01 Jun 2026 23:49:11 -0400</pubDate>
+      <pubDate>Wed, 03 Jun 2026 10:50:00 -0400</pubDate>
       <guid>http://localhost:1313/tags/htb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sudo</title>
+      <link>http://localhost:1313/tags/sudo/</link>
+      <pubDate>Wed, 03 Jun 2026 10:50:00 -0400</pubDate>
+      <guid>http://localhost:1313/tags/sudo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fixing Exploits</title>
+      <link>http://localhost:1313/tags/fixing-exploits/</link>
+      <pubDate>Tue, 02 Jun 2026 22:49:13 -0400</pubDate>
+      <guid>http://localhost:1313/tags/fixing-exploits/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Metasploit</title>
+      <link>http://localhost:1313/tags/metasploit/</link>
+      <pubDate>Tue, 02 Jun 2026 22:49:13 -0400</pubDate>
+      <guid>http://localhost:1313/tags/metasploit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Repeat</title>
+      <link>http://localhost:1313/tags/repeat/</link>
+      <pubDate>Tue, 02 Jun 2026 22:49:13 -0400</pubDate>
+      <guid>http://localhost:1313/tags/repeat/</guid>
       <description></description>
     </item>
     <item>
@@ -27,13 +62,6 @@
       <link>http://localhost:1313/tags/kernel-exploit/</link>
       <pubDate>Mon, 01 Jun 2026 23:49:11 -0400</pubDate>
       <guid>http://localhost:1313/tags/kernel-exploit/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Repeat</title>
-      <link>http://localhost:1313/tags/repeat/</link>
-      <pubDate>Mon, 01 Jun 2026 23:49:11 -0400</pubDate>
-      <guid>http://localhost:1313/tags/repeat/</guid>
       <description></description>
     </item>
     <item>

@@ -2,28 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/htb-writeups/bashed/</loc>
+    <lastmod>2026-06-03T10:50:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cronjobs/</loc>
+    <lastmod>2026-06-03T10:50:00-04:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/easy/</loc>
-    <lastmod>2026-06-01T23:49:11-04:00</lastmod>
+    <lastmod>2026-06-03T10:50:00-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-06-01T23:49:11-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/htb-writeups/help/</loc>
-    <lastmod>2026-06-01T23:49:11-04:00</lastmod>
+    <lastmod>2026-06-03T10:50:00-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/htb/</loc>
+    <lastmod>2026-06-03T10:50:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sudo/</loc>
+    <lastmod>2026-06-03T10:50:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-06-03T10:50:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/fixing-exploits/</loc>
+    <lastmod>2026-06-02T22:49:13-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/htb-writeups/irked/</loc>
+    <lastmod>2026-06-02T22:49:13-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/metasploit/</loc>
+    <lastmod>2026-06-02T22:49:13-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/repeat/</loc>
+    <lastmod>2026-06-02T22:49:13-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/htb-writeups/help/</loc>
     <lastmod>2026-06-01T23:49:11-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/kernel-exploit/</loc>
     <lastmod>2026-06-01T23:49:11-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/repeat/</loc>
-    <lastmod>2026-06-01T23:49:11-04:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/sqli/</loc>
-    <lastmod>2026-06-01T23:49:11-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-06-01T23:49:11-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blogs/</loc>
