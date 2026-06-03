@@ -17,12 +17,12 @@ tags = ["htb", "easy", "sqli","kernel exploit","repeat"]
 
 ---
 # Attack + Enum Vectors:
-TCP 3000: HTTP; Node.js Express framework?
-TCP 80: HTTP: Apache 2.4.18
+- TCP 3000: HTTP; Node.js Express framework?
+- TCP 80: HTTP: Apache 2.4.18
 
-TCP 22: SSH
+- TCP 22: SSH
 ## UDP (161 SNMP)?
-UDP 161: closed
+- UDP 161: closed
 
 ---
 # `nmap` results:

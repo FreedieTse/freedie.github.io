@@ -56,10 +56,9 @@ PORT      STATE SERVICE REASON         VERSION
 
 ---
 # Attack + Enum Vectors
-TCP 111: RPCBind?
-TCP 80: HTTP Apache httpd 2.4.10 
-
-TCP 22: OpenSSH 6.7p1
+- TCP 111: RPCBind?
+- TCP 80: HTTP Apache httpd 2.4.10 
+- TCP 22: OpenSSH 6.7p1
 
 Unknown:
 - TCP 6697: irc?
@@ -68,7 +67,7 @@ Unknown:
 - TCP 39984: rpc status?
 
 ## UDP (161 SNMP)?
-UDP 161: SNMP closed
+- UDP 161: SNMP closed
 
 ---
 # Service Enum Notes:
