@@ -70,36 +70,11 @@ I am sure there are very good guides and tricks out there already and I will try
     line-height: 1.5;
     font-size: 0.9rem;
   }
-  pre code {
-    white-space: pre;        
-  }
-   
-  code {
-    padding: 0.15rem 0.35rem;
-    border-radius: 4px;
-    font-size: 0.88em;
-  }
-</style>
+  pre code { white-space: pre; }
+  code { padding: 0.15rem 0.35rem; border-radius: 4px; font-size: 0.88em; }
+  
+  .code-toolbar .toolbar { display: none !important; }
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('pre').forEach(function (block) {
-    const btn = document.createElement('button');
-    btn.className = 'copy-btn';
-    btn.textContent = 'Copy';
-    btn.addEventListener('click', function () {
-      const code = block.querySelector('code') || block;
-      navigator.clipboard.writeText(code.innerText).then(function () {
-        btn.textContent = 'Copied!';
-        setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
-      });
-    });
-    block.style.position = 'relative';
-    block.appendChild(btn);
-  });
-});
-</script>
-<style>
   .copy-btn {
     position: absolute;
     top: 0.5rem;
@@ -118,9 +93,39 @@ document.addEventListener('DOMContentLoaded', function () {
   .copy-btn:hover { background: rgba(255,255,255,0.2); }
 </style>
 
-<style>
-  body .container { justify-content: flex-start !important; }
-</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('pre').forEach(function (block) {
+    if (block.querySelector('.copy-btn')) return;
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.type = 'button';
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', function () {
+      const codeEl = block.querySelector('code') || block;
+      const text = codeEl.innerText;
+      const done = function () {
+        btn.textContent = 'Copied!';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+    block.style.position = 'relative';
+    block.appendChild(btn);
+  });
+});
+</script>
 
 
 
