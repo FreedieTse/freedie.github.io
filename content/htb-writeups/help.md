@@ -3,29 +3,21 @@ date = '2026-06-01T23:49:11-04:00'
 title = 'Help'
 tags = ["htb", "easy", "sqli","kernel exploit","repeat"]
 +++
+![](https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/2f6225d90a3caf56699c3d93e8779d6b.png)
 
+https://www.hackthebox.com/machines/Help
+## OS: Ubuntu
 ``` IP
 10.129.230.159
 ```
-# OS: Ubuntu
-# Credentials:
+## Credentials:
 
 | Username | Password | Notes/Hash                  |
 | -------- | -------- | --------------------------- |
 | Shiv     |          | from `http://help.htb:3000` |
 
-
 ---
-# Attack + Enum Vectors:
-- TCP 3000: HTTP; Node.js Express framework?
-- TCP 80: HTTP: Apache 2.4.18
-
-- TCP 22: SSH
-## UDP (161 SNMP)?
-- UDP 161: closed
-
----
-# `nmap` results:
+## `nmap` results:
 ```
 # Nmap 7.99 scan initiated Mon Jun  1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159
 Nmap scan report for 10.129.230.159
@@ -54,7 +46,16 @@ PORT     STATE SERVICE REASON         VERSION
 ```
 
 ---
-# Service Enum Notes:
+## Attack + Enum Vectors:
+- TCP 3000: HTTP; Node.js Express framework?
+- TCP 80: HTTP: Apache 2.4.18
+
+- TCP 22: SSH
+### UDP (161 SNMP)?
+- UDP 161: closed
+
+---
+## Service Enum Notes:
 ### Web Service: `Gobuster` / `fuff`
 Going in to `http://10.129.230.159` it redirected to `help.htb`. 
 Let's update our `/etc/hosts` with `10.129.230.159` to `help.htb`
@@ -103,7 +104,7 @@ controllers          (Status: 200) [Size: 11321]
 viewing them, we got redirected to home page, let's move forward first
 
 ---
-# Initial Foothold
+## Initial Foothold
 Alright then let's play around with the `/support` page 
 so searching `helpdeskz`: we found out that they have a github page
 https://github.com/helpdesk-z/helpdeskz-dev
@@ -171,7 +172,7 @@ python2 40300.py http://help.htb/support/uploads/tickets php-reverse-shell.php
 this time we got in! Let's now upgrade our shell
 
 ---
-# Priv Esc
+## Priv Esc
 After some enumeration: 
 ```
 uname -a
@@ -203,7 +204,7 @@ chmod +x test
 We got root! 
 
 Therefore pwn'd.
-# P.S.
+### P.S.
 Remember to change back the time zone of our kali, for my case:
 ```
 timedatectl set-ntp 1
@@ -213,10 +214,9 @@ sudo timedatectl set-timezone America/New_York
 ```
 
 ---
-# Conclusion & Remediation
+## Conclusion & Remediation
 This box was definitely not easy for me, but I had a lot of fun learning new methodologies that I get to add to my notes. For remediation, servers with `helpdeskz 1.0.2` should update it to the latest version. Also, developers should never allow for `.php` files upload with security by obscurity.
-
-# Pushing For More:
+## Pushing For More:
 Okay, seems like there is actually another way to get initial access on this box using `SQLi`; since this is the first box I do after my OSCP exam, I want to practice `sqlmap` as it was not allowed on the OSCP exam. First let's go back to the enumeration of `http://help.htb:3000`
 ```
 {"message":"Hi Shiv, To get access please find the credentials with given query"}

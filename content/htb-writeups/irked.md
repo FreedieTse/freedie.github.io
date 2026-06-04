@@ -3,18 +3,20 @@ date = '2026-06-02T22:49:13-04:00'
 title = 'Irked'
 tags = ["htb", "easy", "metasploit","fixing exploits","repeat"]
 +++
+![](https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/5fb846e75cf0db0c4b27e2dc64a9bf82.png)
 
+https://www.hackthebox.com/machines/irked
+## OS: Linux
 ``` IP
 10.129.8.83
 ```
-# OS: 
-# Credentials:
+## Credentials:
 
 | Username | Password | Notes/Hash |
 | -------- | -------- | ---------- |
 
 ---
-# `nmap` results:
+## `nmap` results:
  ```
  # Nmap 7.99 scan initiated Tue Jun  2 14:06:31 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Irked 10.129.8.83
 Nmap scan report for 10.129.8.72
@@ -55,7 +57,7 @@ PORT      STATE SERVICE REASON         VERSION
  ```
 
 ---
-# Attack + Enum Vectors
+## Attack + Enum Vectors
 - TCP 111: RPCBind?
 - TCP 80: HTTP Apache httpd 2.4.10 
 - TCP 22: OpenSSH 6.7p1
@@ -66,11 +68,11 @@ Unknown:
 - TCP 65534: irc?
 - TCP 39984: rpc status?
 
-## UDP (161 SNMP)?
+### UDP (161 SNMP)?
 - UDP 161: SNMP closed
 
 ---
-# Service Enum Notes:
+## Service Enum Notes:
 RPCBind: yields nothing interesting trying the enumeration methodology from: https://hackviser.com/tactics/pentesting/services/rpcbind
 
 ### Web Service: `Gobuster` / `fuff`
@@ -166,7 +168,7 @@ so it shows the time and some information? We got the a name Bob and his last na
 ```
 
 ---
-# Initial Foothold
+## Initial Foothold
 So we found `UnrealIRCd 3.2.8.1` as version number, let's see if there are exploits
 ```
 searchsploit unreal 3.2.8.1
@@ -240,7 +242,7 @@ stty rows 48 cols 210
 we got a fully upgraded stabilized shell
 
 ---
-# Priv Esc
+## Priv Esc
 So we are in the `Unreal3.2` directory: searching google on `UnrealIRC config file`: and we know the config file is `unrealircd.conf`
 ```
 cat unrealircd.conf | grep -i "pass"
@@ -294,7 +296,7 @@ We got root shell!
 Therefore pwn'd
 
 ---
-# Conclusion & Remediation
+## Conclusion & Remediation
 In this box we get to learn about how to enumerate `IRC` and using exploits to gain reverse shell. Lastly, since there is a misconfigured SUID bit program we get to abuse it and obtain root.
 
 To remediate, system administrators should upgrade their outdated `UnrealIRCd` to the newest version. If cannot update, at least prevent any user from executing the `/info` command to gett the version banner. In addition, there shouldn't be any SUID programs that is owned by root to execute a program in `/tmp` that has not been created.

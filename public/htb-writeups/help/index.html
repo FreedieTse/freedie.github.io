@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="10.129.230.159 OS: Ubuntu Credentials: Username Password Notes/Hash Shiv from http://help.htb:3000 Attack &#43; Enum Vectors: TCP 3000: HTTP; Node.js Express framework?
-TCP 80: HTTP: Apache 2.4.18
-TCP 22: SSH
-UDP (161 SNMP)? UDP 161: closed nmap results: # Nmap 7.99 scan initiated Mon Jun 1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159 Nmap scan report for 10.129.230.159 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-01 16:10:37 EDT for 28s Not shown: 64490 closed tcp ports (reset), 1042 filtered tcp ports (no-response) Some closed ports may be reported as filtered due to --defeat-rst-ratelimit PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZY4jlvWqpdi8bJPUnSkjWmz92KRwr2G6xCttorHM8Rq2eCEAe1ALqpgU44L3potYUZvaJuEIsBVUSPlsKv&#43;ds8nS7Mva9e9ztlad/fzBlyBpkiYxty&#43;peoIzn4lUNSadPLtYH6khzN2PwEJYtM/b6BLlAAY5mDsSF0Cz3wsPbnu87fNdd7WO0PKsqRtHpokjkJ22uYJoDSAM06D7uBuegMK/sWTVtrsDakb1Tb6H8&#43;D0y6ZQoE7XyHSqD0OABV3ON39GzLBOnob4Gq8aegKBMa3hT/Xx9Iac6t5neiIABnG4UP03gm207oGIFHvlElGUR809Q9qCJ0nZsup4bNqa/ | 256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHINVMyTivG0LmhaVZxiIESQuWxvN2jt87kYiuPY2jyaPBD4DEt8e/1kN/4GMWj1b3FE7e8nxCL4PF/lR9XjEis= | 256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHxDPln3rCQj04xFAKyecXJaANrW3MBZJmbhtL4SuDYX 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 |_http-title: Did not follow redirect to http://help.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) 3000/tcp open http syn-ack ttl 63 Node.js Express framework |_http-title: Site doesn&#39;t have a title (application/json; charset=utf-8). | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Enum Notes: Web Service: Gobuster / fuff Going in to http://10.129.230.159 it redirected to help.htb. Let&rsquo;s update our /etc/hosts with 10.129.230.159 to help.htb
+<meta name="description" content="
+https://www.hackthebox.com/machines/Help
+OS: Ubuntu 10.129.230.159 Credentials: Username Password Notes/Hash Shiv from http://help.htb:3000 nmap results: # Nmap 7.99 scan initiated Mon Jun 1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159 Nmap scan report for 10.129.230.159 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-01 16:10:37 EDT for 28s Not shown: 64490 closed tcp ports (reset), 1042 filtered tcp ports (no-response) Some closed ports may be reported as filtered due to --defeat-rst-ratelimit PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZY4jlvWqpdi8bJPUnSkjWmz92KRwr2G6xCttorHM8Rq2eCEAe1ALqpgU44L3potYUZvaJuEIsBVUSPlsKv&#43;ds8nS7Mva9e9ztlad/fzBlyBpkiYxty&#43;peoIzn4lUNSadPLtYH6khzN2PwEJYtM/b6BLlAAY5mDsSF0Cz3wsPbnu87fNdd7WO0PKsqRtHpokjkJ22uYJoDSAM06D7uBuegMK/sWTVtrsDakb1Tb6H8&#43;D0y6ZQoE7XyHSqD0OABV3ON39GzLBOnob4Gq8aegKBMa3hT/Xx9Iac6t5neiIABnG4UP03gm207oGIFHvlElGUR809Q9qCJ0nZsup4bNqa/ | 256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHINVMyTivG0LmhaVZxiIESQuWxvN2jt87kYiuPY2jyaPBD4DEt8e/1kN/4GMWj1b3FE7e8nxCL4PF/lR9XjEis= | 256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHxDPln3rCQj04xFAKyecXJaANrW3MBZJmbhtL4SuDYX 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 |_http-title: Did not follow redirect to http://help.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) 3000/tcp open http syn-ack ttl 63 Node.js Express framework |_http-title: Site doesn&#39;t have a title (application/json; charset=utf-8). | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Attack &#43; Enum Vectors: TCP 3000: HTTP; Node.js Express framework?
 " />
 <meta name="keywords" content=", htb, easy, sqli, kernel exploit, repeat" />
 <meta name="robots" content="noodp" />
@@ -19,7 +18,7 @@ UDP (161 SNMP)? UDP 161: closed nmap results: # Nmap 7.99 scan initiated Mon Jun
 
     <title>
         
-            Help :: Freedie | Pentration Testing Lab Writeups 
+            Help :: Freedie | Penetration Testing Lab Writeups 
         
     </title>
 
@@ -39,21 +38,17 @@ UDP (161 SNMP)? UDP 161: closed nmap results: # Nmap 7.99 scan initiated Mon Jun
 
 
   <meta itemprop="name" content="Help">
-  <meta itemprop="description" content="10.129.230.159 OS: Ubuntu Credentials: Username Password Notes/Hash Shiv from http://help.htb:3000 Attack &#43; Enum Vectors: TCP 3000: HTTP; Node.js Express framework?
-TCP 80: HTTP: Apache 2.4.18
-TCP 22: SSH
-UDP (161 SNMP)? UDP 161: closed nmap results: # Nmap 7.99 scan initiated Mon Jun 1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159 Nmap scan report for 10.129.230.159 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-01 16:10:37 EDT for 28s Not shown: 64490 closed tcp ports (reset), 1042 filtered tcp ports (no-response) Some closed ports may be reported as filtered due to --defeat-rst-ratelimit PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZY4jlvWqpdi8bJPUnSkjWmz92KRwr2G6xCttorHM8Rq2eCEAe1ALqpgU44L3potYUZvaJuEIsBVUSPlsKv&#43;ds8nS7Mva9e9ztlad/fzBlyBpkiYxty&#43;peoIzn4lUNSadPLtYH6khzN2PwEJYtM/b6BLlAAY5mDsSF0Cz3wsPbnu87fNdd7WO0PKsqRtHpokjkJ22uYJoDSAM06D7uBuegMK/sWTVtrsDakb1Tb6H8&#43;D0y6ZQoE7XyHSqD0OABV3ON39GzLBOnob4Gq8aegKBMa3hT/Xx9Iac6t5neiIABnG4UP03gm207oGIFHvlElGUR809Q9qCJ0nZsup4bNqa/ | 256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHINVMyTivG0LmhaVZxiIESQuWxvN2jt87kYiuPY2jyaPBD4DEt8e/1kN/4GMWj1b3FE7e8nxCL4PF/lR9XjEis= | 256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHxDPln3rCQj04xFAKyecXJaANrW3MBZJmbhtL4SuDYX 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 |_http-title: Did not follow redirect to http://help.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) 3000/tcp open http syn-ack ttl 63 Node.js Express framework |_http-title: Site doesn&#39;t have a title (application/json; charset=utf-8). | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Enum Notes: Web Service: Gobuster / fuff Going in to http://10.129.230.159 it redirected to help.htb. Let’s update our /etc/hosts with 10.129.230.159 to help.htb">
+  <meta itemprop="description" content="https://www.hackthebox.com/machines/Help
+OS: Ubuntu 10.129.230.159 Credentials: Username Password Notes/Hash Shiv from http://help.htb:3000 nmap results: # Nmap 7.99 scan initiated Mon Jun 1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159 Nmap scan report for 10.129.230.159 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-01 16:10:37 EDT for 28s Not shown: 64490 closed tcp ports (reset), 1042 filtered tcp ports (no-response) Some closed ports may be reported as filtered due to --defeat-rst-ratelimit PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZY4jlvWqpdi8bJPUnSkjWmz92KRwr2G6xCttorHM8Rq2eCEAe1ALqpgU44L3potYUZvaJuEIsBVUSPlsKv&#43;ds8nS7Mva9e9ztlad/fzBlyBpkiYxty&#43;peoIzn4lUNSadPLtYH6khzN2PwEJYtM/b6BLlAAY5mDsSF0Cz3wsPbnu87fNdd7WO0PKsqRtHpokjkJ22uYJoDSAM06D7uBuegMK/sWTVtrsDakb1Tb6H8&#43;D0y6ZQoE7XyHSqD0OABV3ON39GzLBOnob4Gq8aegKBMa3hT/Xx9Iac6t5neiIABnG4UP03gm207oGIFHvlElGUR809Q9qCJ0nZsup4bNqa/ | 256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHINVMyTivG0LmhaVZxiIESQuWxvN2jt87kYiuPY2jyaPBD4DEt8e/1kN/4GMWj1b3FE7e8nxCL4PF/lR9XjEis= | 256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHxDPln3rCQj04xFAKyecXJaANrW3MBZJmbhtL4SuDYX 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 |_http-title: Did not follow redirect to http://help.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) 3000/tcp open http syn-ack ttl 63 Node.js Express framework |_http-title: Site doesn&#39;t have a title (application/json; charset=utf-8). | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Attack &#43; Enum Vectors: TCP 3000: HTTP; Node.js Express framework?">
   <meta itemprop="datePublished" content="2026-06-01T23:49:11-04:00">
   <meta itemprop="dateModified" content="2026-06-01T23:49:11-04:00">
-  <meta itemprop="wordCount" content="1673">
+  <meta itemprop="wordCount" content="1674">
   <meta itemprop="keywords" content="Htb,Easy,Sqli,Kernel Exploit,Repeat">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Help">
-  <meta name="twitter:description" content="10.129.230.159 OS: Ubuntu Credentials: Username Password Notes/Hash Shiv from http://help.htb:3000 Attack &#43; Enum Vectors: TCP 3000: HTTP; Node.js Express framework?
-TCP 80: HTTP: Apache 2.4.18
-TCP 22: SSH
-UDP (161 SNMP)? UDP 161: closed nmap results: # Nmap 7.99 scan initiated Mon Jun 1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159 Nmap scan report for 10.129.230.159 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-01 16:10:37 EDT for 28s Not shown: 64490 closed tcp ports (reset), 1042 filtered tcp ports (no-response) Some closed ports may be reported as filtered due to --defeat-rst-ratelimit PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZY4jlvWqpdi8bJPUnSkjWmz92KRwr2G6xCttorHM8Rq2eCEAe1ALqpgU44L3potYUZvaJuEIsBVUSPlsKv&#43;ds8nS7Mva9e9ztlad/fzBlyBpkiYxty&#43;peoIzn4lUNSadPLtYH6khzN2PwEJYtM/b6BLlAAY5mDsSF0Cz3wsPbnu87fNdd7WO0PKsqRtHpokjkJ22uYJoDSAM06D7uBuegMK/sWTVtrsDakb1Tb6H8&#43;D0y6ZQoE7XyHSqD0OABV3ON39GzLBOnob4Gq8aegKBMa3hT/Xx9Iac6t5neiIABnG4UP03gm207oGIFHvlElGUR809Q9qCJ0nZsup4bNqa/ | 256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHINVMyTivG0LmhaVZxiIESQuWxvN2jt87kYiuPY2jyaPBD4DEt8e/1kN/4GMWj1b3FE7e8nxCL4PF/lR9XjEis= | 256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHxDPln3rCQj04xFAKyecXJaANrW3MBZJmbhtL4SuDYX 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 |_http-title: Did not follow redirect to http://help.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) 3000/tcp open http syn-ack ttl 63 Node.js Express framework |_http-title: Site doesn&#39;t have a title (application/json; charset=utf-8). | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Service Enum Notes: Web Service: Gobuster / fuff Going in to http://10.129.230.159 it redirected to help.htb. Let’s update our /etc/hosts with 10.129.230.159 to help.htb">
+  <meta name="twitter:description" content="https://www.hackthebox.com/machines/Help
+OS: Ubuntu 10.129.230.159 Credentials: Username Password Notes/Hash Shiv from http://help.htb:3000 nmap results: # Nmap 7.99 scan initiated Mon Jun 1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159 Nmap scan report for 10.129.230.159 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-01 16:10:37 EDT for 28s Not shown: 64490 closed tcp ports (reset), 1042 filtered tcp ports (no-response) Some closed ports may be reported as filtered due to --defeat-rst-ratelimit PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 e5:bb:4d:9c:de:af:6b:bf:ba:8c:22:7a:d8:d7:43:28 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZY4jlvWqpdi8bJPUnSkjWmz92KRwr2G6xCttorHM8Rq2eCEAe1ALqpgU44L3potYUZvaJuEIsBVUSPlsKv&#43;ds8nS7Mva9e9ztlad/fzBlyBpkiYxty&#43;peoIzn4lUNSadPLtYH6khzN2PwEJYtM/b6BLlAAY5mDsSF0Cz3wsPbnu87fNdd7WO0PKsqRtHpokjkJ22uYJoDSAM06D7uBuegMK/sWTVtrsDakb1Tb6H8&#43;D0y6ZQoE7XyHSqD0OABV3ON39GzLBOnob4Gq8aegKBMa3hT/Xx9Iac6t5neiIABnG4UP03gm207oGIFHvlElGUR809Q9qCJ0nZsup4bNqa/ | 256 d5:b0:10:50:74:86:a3:9f:c5:53:6f:3b:4a:24:61:19 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHINVMyTivG0LmhaVZxiIESQuWxvN2jt87kYiuPY2jyaPBD4DEt8e/1kN/4GMWj1b3FE7e8nxCL4PF/lR9XjEis= | 256 e2:1b:88:d3:76:21:d4:1e:38:15:4a:81:11:b7:99:07 (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHxDPln3rCQj04xFAKyecXJaANrW3MBZJmbhtL4SuDYX 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 |_http-title: Did not follow redirect to http://help.htb/ | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) 3000/tcp open http syn-ack ttl 63 Node.js Express framework |_http-title: Site doesn&#39;t have a title (application/json; charset=utf-8). | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS Attack &#43; Enum Vectors: TCP 3000: HTTP; Node.js Express framework?">
 
 
 
@@ -69,6 +64,10 @@ UDP (161 SNMP)? UDP 161: closed nmap results: # Nmap 7.99 scan initiated Mon Jun
 
 
 <style>
+   
+  body .container { justify-content: flex-start !important; }
+
+   
   pre {
     overflow-x: auto;
     padding: 1rem 1.25rem;
@@ -79,6 +78,7 @@ UDP (161 SNMP)? UDP 161: closed nmap results: # Nmap 7.99 scan initiated Mon Jun
   pre code { white-space: pre; }
   code { padding: 0.15rem 0.35rem; border-radius: 4px; font-size: 0.88em; }
   
+   
   .code-toolbar .toolbar { display: none !important; }
 
   .copy-btn {
@@ -95,6 +95,17 @@ UDP (161 SNMP)? UDP 161: closed nmap results: # Nmap 7.99 scan initiated Mon Jun
     opacity: 0;
     transition: opacity 0.15s;
   }
+
+   
+  :not(pre) > code {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.88em;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  }
+
   pre:hover .copy-btn { opacity: 1; }
   .copy-btn:hover { background: rgba(255,255,255,0.2); }
 </style>
@@ -204,9 +215,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 
 
                 <div class="post-content">
-                    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>10.129.230.159
-</span></span></code></pre></div><h1 id="os-ubuntu">OS: Ubuntu</h1>
-<h1 id="credentials">Credentials:</h1>
+                    <p><img src="https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/2f6225d90a3caf56699c3d93e8779d6b.png" alt=""></p>
+<p><a href="https://www.hackthebox.com/machines/Help">https://www.hackthebox.com/machines/Help</a></p>
+<h2 id="os-ubuntu">OS: Ubuntu</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>10.129.230.159
+</span></span></code></pre></div><h2 id="credentials">Credentials:</h2>
 <table>
   <thead>
       <tr>
@@ -224,24 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
   </tbody>
 </table>
 <hr>
-<h1 id="attack--enum-vectors">Attack + Enum Vectors:</h1>
-<ul>
-<li>
-<p>TCP 3000: HTTP; Node.js Express framework?</p>
-</li>
-<li>
-<p>TCP 80: HTTP: Apache 2.4.18</p>
-</li>
-<li>
-<p>TCP 22: SSH</p>
-</li>
-</ul>
-<h2 id="udp-161-snmp">UDP (161 SNMP)?</h2>
-<ul>
-<li>UDP 161: closed</li>
-</ul>
-<hr>
-<h1 id="nmap-results"><code>nmap</code> results:</h1>
+<h2 id="nmap-results"><code>nmap</code> results:</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Nmap 7.99 scan initiated Mon Jun  1 16:10:36 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Help 10.129.230.159
 </span></span><span style="display:flex;"><span>Nmap scan report for 10.129.230.159
 </span></span><span style="display:flex;"><span>Host is up, received echo-reply ttl 63 (0.018s latency).
@@ -267,7 +263,24 @@ document.addEventListener('DOMContentLoaded', function () {
 </span></span><span style="display:flex;"><span>| http-methods: 
 </span></span><span style="display:flex;"><span>|_  Supported Methods: GET HEAD POST OPTIONS
 </span></span></code></pre></div><hr>
-<h1 id="service-enum-notes">Service Enum Notes:</h1>
+<h2 id="attack--enum-vectors">Attack + Enum Vectors:</h2>
+<ul>
+<li>
+<p>TCP 3000: HTTP; Node.js Express framework?</p>
+</li>
+<li>
+<p>TCP 80: HTTP: Apache 2.4.18</p>
+</li>
+<li>
+<p>TCP 22: SSH</p>
+</li>
+</ul>
+<h3 id="udp-161-snmp">UDP (161 SNMP)?</h3>
+<ul>
+<li>UDP 161: closed</li>
+</ul>
+<hr>
+<h2 id="service-enum-notes">Service Enum Notes:</h2>
 <h3 id="web-service-gobuster--fuff">Web Service: <code>Gobuster</code> / <code>fuff</code></h3>
 <p>Going in to <code>http://10.129.230.159</code> it redirected to <code>help.htb</code>.
 Let&rsquo;s update our <code>/etc/hosts</code> with <code>10.129.230.159</code> to <code>help.htb</code></p>
@@ -297,7 +310,7 @@ we see we are at <code>helpdeskz</code> software appearantly.</p>
 </span></span><span style="display:flex;"><span>controllers          (Status: <span style="color:#bd93f9">200</span>) [Size: <span style="color:#bd93f9">11321</span>]
 </span></span></code></pre></div><p>viewing them, we got redirected to home page, let&rsquo;s move forward first</p>
 <hr>
-<h1 id="initial-foothold">Initial Foothold</h1>
+<h2 id="initial-foothold">Initial Foothold</h2>
 <p>Alright then let&rsquo;s play around with the <code>/support</code> page
 so searching <code>helpdeskz</code>: we found out that they have a github page
 <a href="https://github.com/helpdesk-z/helpdeskz-dev">https://github.com/helpdesk-z/helpdeskz-dev</a>
@@ -334,7 +347,7 @@ I figured out that the time zone is UTC time. Turn off NTP:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>python2 <span style="color:#bd93f9">40300.</span>py http:<span style="color:#ff79c6">//</span>help<span style="color:#ff79c6">.</span>htb<span style="color:#ff79c6">/</span>support<span style="color:#ff79c6">/</span>uploads<span style="color:#ff79c6">/</span>tickets php<span style="color:#ff79c6">-</span>reverse<span style="color:#ff79c6">-</span>shell<span style="color:#ff79c6">.</span>php 
 </span></span></code></pre></div><p>this time we got in! Let&rsquo;s now upgrade our shell</p>
 <hr>
-<h1 id="priv-esc">Priv Esc</h1>
+<h2 id="priv-esc">Priv Esc</h2>
 <p>After some enumeration:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>uname -a
 </span></span></code></pre></div><p>we found that the linux version <code>4.4.0-116</code> is vulnerable to kernel exploits.</p>
@@ -350,14 +363,14 @@ I figured out that the time zone is UTC time. Turn off NTP:</p>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>./test
 </span></span></code></pre></div><p>We got root!</p>
 <p>Therefore pwn&rsquo;d.</p>
-<h1 id="ps">P.S.</h1>
+<h3 id="ps">P.S.</h3>
 <p>Remember to change back the time zone of our kali, for my case:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>timedatectl set-ntp 1
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo timedatectl set-timezone America/New_York
 </span></span></code></pre></div><hr>
-<h1 id="conclusion--remediation">Conclusion &amp; Remediation</h1>
+<h2 id="conclusion--remediation">Conclusion &amp; Remediation</h2>
 <p>This box was definitely not easy for me, but I had a lot of fun learning new methodologies that I get to add to my notes. For remediation, servers with <code>helpdeskz 1.0.2</code> should update it to the latest version. Also, developers should never allow for <code>.php</code> files upload with security by obscurity.</p>
-<h1 id="pushing-for-more">Pushing For More:</h1>
+<h2 id="pushing-for-more">Pushing For More:</h2>
 <p>Okay, seems like there is actually another way to get initial access on this box using <code>SQLi</code>; since this is the first box I do after my OSCP exam, I want to practice <code>sqlmap</code> as it was not allowed on the OSCP exam. First let&rsquo;s go back to the enumeration of <code>http://help.htb:3000</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>{&#34;message&#34;:&#34;Hi Shiv, To get access please find the credentials with given query&#34;}
 </span></span></code></pre></div><p>Appearantly by walkthrough if we google&rsquo;d <code>nodejs express query language</code> would have showed something hinting about <code>graphql</code>. However, I don&rsquo;t think this was very repeatable since I&rsquo;ve tried googling <code>nodejs express pentesting</code> or something similar before, but yields nothing related to <code>graphql</code>. The most logical thing that make sense to me is <code>query</code> must be used with some <code>language</code>? Anyhow, I will add <code>google query language</code> to my methodology whenever I see the keyword <code>query</code>.</p>

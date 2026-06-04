@@ -6,7 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="10.129.186.17 OS: Ubuntu Credentials: Username Password nmap results: 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu)) |_http-favicon: Unknown favicon MD5: 6AA5034A553DFA77C3B2C7B4C26CF870 |_http-title: Arrexel&#39;s Development Site | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) Device type: general purpose Running: Linux 3.X|4.X OS CPE: cpe:/o:linux:linux_kernel:3 cpe Attack &#43; Enum Vectors: (Ports, etc.) TCP 80: HTTP Web Service Enum: Gobuster / wfuzz after enuming with gobuster: we found a /dev directory with web shell
+<meta name="description" content="
+https://www.hackthebox.com/machines/Bashed
+OS: Ubuntu 10.129.186.17 Credentials: Username Password nmap results: 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu)) |_http-favicon: Unknown favicon MD5: 6AA5034A553DFA77C3B2C7B4C26CF870 |_http-title: Arrexel&#39;s Development Site | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) Device type: general purpose Running: Linux 3.X|4.X OS CPE: cpe:/o:linux:linux_kernel:3 cpe Attack &#43; Enum Vectors: (Ports, etc.) TCP 80: HTTP Web Service Enum: Gobuster / wfuzz after enuming with gobuster: we found a /dev directory with web shell
 " />
 <meta name="keywords" content=", htb, easy, sudo, cronjobs" />
 <meta name="robots" content="noodp" />
@@ -16,7 +18,7 @@
 
     <title>
         
-            Bashed :: Freedie | Pentration Testing Lab Writeups 
+            Bashed :: Freedie | Penetration Testing Lab Writeups 
         
     </title>
 
@@ -36,15 +38,17 @@
 
 
   <meta itemprop="name" content="Bashed">
-  <meta itemprop="description" content="10.129.186.17 OS: Ubuntu Credentials: Username Password nmap results: 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu)) |_http-favicon: Unknown favicon MD5: 6AA5034A553DFA77C3B2C7B4C26CF870 |_http-title: Arrexel&#39;s Development Site | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) Device type: general purpose Running: Linux 3.X|4.X OS CPE: cpe:/o:linux:linux_kernel:3 cpe Attack &#43; Enum Vectors: (Ports, etc.) TCP 80: HTTP Web Service Enum: Gobuster / wfuzz after enuming with gobuster: we found a /dev directory with web shell">
+  <meta itemprop="description" content="https://www.hackthebox.com/machines/Bashed
+OS: Ubuntu 10.129.186.17 Credentials: Username Password nmap results: 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu)) |_http-favicon: Unknown favicon MD5: 6AA5034A553DFA77C3B2C7B4C26CF870 |_http-title: Arrexel&#39;s Development Site | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) Device type: general purpose Running: Linux 3.X|4.X OS CPE: cpe:/o:linux:linux_kernel:3 cpe Attack &#43; Enum Vectors: (Ports, etc.) TCP 80: HTTP Web Service Enum: Gobuster / wfuzz after enuming with gobuster: we found a /dev directory with web shell">
   <meta itemprop="datePublished" content="2026-06-03T10:50:00-04:00">
   <meta itemprop="dateModified" content="2026-06-03T10:50:00-04:00">
-  <meta itemprop="wordCount" content="175">
+  <meta itemprop="wordCount" content="176">
   <meta itemprop="keywords" content="Htb,Easy,Sudo,Cronjobs">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Bashed">
-  <meta name="twitter:description" content="10.129.186.17 OS: Ubuntu Credentials: Username Password nmap results: 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu)) |_http-favicon: Unknown favicon MD5: 6AA5034A553DFA77C3B2C7B4C26CF870 |_http-title: Arrexel&#39;s Development Site | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) Device type: general purpose Running: Linux 3.X|4.X OS CPE: cpe:/o:linux:linux_kernel:3 cpe Attack &#43; Enum Vectors: (Ports, etc.) TCP 80: HTTP Web Service Enum: Gobuster / wfuzz after enuming with gobuster: we found a /dev directory with web shell">
+  <meta name="twitter:description" content="https://www.hackthebox.com/machines/Bashed
+OS: Ubuntu 10.129.186.17 Credentials: Username Password nmap results: 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu)) |_http-favicon: Unknown favicon MD5: 6AA5034A553DFA77C3B2C7B4C26CF870 |_http-title: Arrexel&#39;s Development Site | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-server-header: Apache/2.4.18 (Ubuntu) Device type: general purpose Running: Linux 3.X|4.X OS CPE: cpe:/o:linux:linux_kernel:3 cpe Attack &#43; Enum Vectors: (Ports, etc.) TCP 80: HTTP Web Service Enum: Gobuster / wfuzz after enuming with gobuster: we found a /dev directory with web shell">
 
 
 
@@ -60,6 +64,10 @@
 
 
 <style>
+   
+  body .container { justify-content: flex-start !important; }
+
+   
   pre {
     overflow-x: auto;
     padding: 1rem 1.25rem;
@@ -70,6 +78,7 @@
   pre code { white-space: pre; }
   code { padding: 0.15rem 0.35rem; border-radius: 4px; font-size: 0.88em; }
   
+   
   .code-toolbar .toolbar { display: none !important; }
 
   .copy-btn {
@@ -86,6 +95,17 @@
     opacity: 0;
     transition: opacity 0.15s;
   }
+
+   
+  :not(pre) > code {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.88em;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  }
+
   pre:hover .copy-btn { opacity: 1; }
   .copy-btn:hover { background: rgba(255,255,255,0.2); }
 </style>
@@ -195,9 +215,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 
 
                 <div class="post-content">
-                    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>10.129.186.17
-</span></span></code></pre></div><h1 id="os--ubuntu">OS:  Ubuntu</h1>
-<h1 id="credentials">Credentials:</h1>
+                    <p><img src="https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/0f058b73659ca043de9f5240abd651ca.png" alt=""></p>
+<p><a href="https://www.hackthebox.com/machines/Bashed">https://www.hackthebox.com/machines/Bashed</a></p>
+<h2 id="os--ubuntu">OS:  Ubuntu</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>10.129.186.17
+</span></span></code></pre></div><h2 id="credentials">Credentials:</h2>
 <table>
   <thead>
       <tr>
@@ -209,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function () {
   </tbody>
 </table>
 <hr>
-<h1 id="nmap-results"><code>nmap</code> results:</h1>
+<h2 id="nmap-results"><code>nmap</code> results:</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu))
 </span></span><span style="display:flex;"><span>|_http-favicon: Unknown favicon MD5: 6AA5034A553DFA77C3B2C7B4C26CF870
 </span></span><span style="display:flex;"><span>|_http-title: Arrexel&#39;s Development Site   
@@ -220,25 +242,25 @@ document.addEventListener('DOMContentLoaded', function () {
 </span></span><span style="display:flex;"><span>Running: Linux 3.X|4.X 
 </span></span><span style="display:flex;"><span>OS CPE: cpe:/o:linux:linux_kernel:3 cpe
 </span></span></code></pre></div><hr>
-<h1 id="attack--enum-vectors-ports-etc">Attack + Enum Vectors: (Ports, etc.)</h1>
+<h2 id="attack--enum-vectors-ports-etc">Attack + Enum Vectors: (Ports, etc.)</h2>
 <ul>
 <li>TCP 80: HTTP</li>
 </ul>
 <hr>
-<h1 id="web-service-enum">Web Service Enum:</h1>
-<h2 id="gobuster--wfuzz"><code>Gobuster</code> / <code>wfuzz</code></h2>
+<h2 id="web-service-enum">Web Service Enum:</h2>
+<h3 id="gobuster--wfuzz"><code>Gobuster</code> / <code>wfuzz</code></h3>
 <p>after enuming with gobuster: we found a <code>/dev</code> directory with web shell</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>http://10.129.186.17/dev/phpbash.min.php
 </span></span></code></pre></div><p>and</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>http://10.129.186.17/dev/phpbash.php
 </span></span></code></pre></div><hr>
-<h1 id="initial-foothold">Initial Foothold</h1>
+<h2 id="initial-foothold">Initial Foothold</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>http://10.129.186.17/dev/phpbash.php
 </span></span></code></pre></div><p>then uploaded a php reverse shell on <code>/uploads</code> directory
 then we visited that on browser and caught a shell
 now we try to privilege escalate</p>
 <hr>
-<h1 id="priv-esc">Priv Esc</h1>
+<h2 id="priv-esc">Priv Esc</h2>
 <p>First we transfer pspy64 to target: we found a cron job running the python script under scripts file</p>
 <p>we first lateral move to scriptmanager using</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo -u scriptmanager bash -i

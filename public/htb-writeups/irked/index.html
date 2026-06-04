@@ -6,7 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="10.129.8.83 OS: Credentials: Username Password Notes/Hash nmap results: # Nmap 7.99 scan initiated Tue Jun 2 14:06:31 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Irked 10.129.8.83 Nmap scan report for 10.129.8.72 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-02 14:06:32 EDT for 26s Not shown: 65528 closed tcp ports (reset) PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 6.7p1 Debian 5&#43;deb8u4 (protocol 2.0) | ssh-hostkey: | 1024 6a:5d:f5:bd:cf:83:78:b6:75:31:9b:dc:79:c5:fd:ad (DSA) | ssh-dss AAAAB3NzaC1kc3MAAACBAI&#43;wKAAyWgx/P7Pe78y6/80XVTd6QEv6t5ZIpdzKvS8qbkChLB7LC&#43;/HVuxLshOUtac4oHr/IF9YBytBoaAte87fxF45o3HS9MflMA4511KTeNwc5QuhdHzqXX9ne0ypBAgFKECBUJqJ23Lp2S9KuYEYLzUhSdUEYqiZlcc65NspAAAAFQDwgf5Wh8QRu3zSvOIXTk&#43;5g0eTKQAAAIBQuTzKnX3nNfflt&#43;&#43;gnjAJ/dIRXW/KMPTNOSo730gLxMWVeId3geXDkiNCD/zo5XgMIQAWDXS&#43;0t0hlsH1BfrDzeEbGSgYNpXoz42RSHKtx7pYLG/hbUr4836olHrxLkjXCFuYFo9fCDs2/QsAeuhCPgEDjLXItW9ibfFqLxyP2QAAAIAE5MCdrGmT8huPIxPI&#43;bQWeQyKQI/lH32FDZb4xJBPrrqlk9wKWOa1fU2JZM0nrOkdnCPIjLeq9&#43;Db5WyZU2u3rdU8aWLZy8zF9mXZxuW/T3yXAV5whYa4QwqaVaiEzjcgRouex0ev/u&#43;y5vlIf4/SfAsiFQPzYKomDiBtByS9XA== | 2048 75:2e:66:bf:b9:3c:cc:f7:7e:84:8a:8b:f0:81:02:33 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDGASnp9kH4PwWZHx/V3aJjxLzjpiqc2FOyppTFp7/JFKcB9otDhh5kWgSrVDVijdsK95KcsEKC/R&#43;HJ9/P0KPdf4hDvjJXB1H3Th5/83gy/TEJTDJG16zXtyR9lPdBYg4n5hhfFWO1PxM9m41XlEuNgiSYOr&#43;uuEeLxzJb6ccq0VMnSvBd88FGnwpEoH1JYZyyTnnbwtBrXSz1tR5ZocJXU4DmI9pzTNkGFT&#43;Q/K6V/sdF73KmMecatgcprIENgmVSaiKh9mb&#43;4vEfWLIe0yZ97c2EdzF5255BalP3xHFAY0jROiBnUDSDlxyWMIcSymZPuE1N6Tu8nQ/pXxKvUar | 256 c8:a3:a2:5e:34:9a:c4:9b:90:53:f7:50:bf:ea:25:3b (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFeZigS1PimiXXJSqDy2KTT4UEEphoLAk8/ftEXUq0ihDOFDrpgT0Y4vYgYPXboLlPBKBc0nVBmKD&#43;6pvSwIEy8= | 256 8d:1b:43:c7:d0:1a:4c:05:cf:82:ed:c1:01:63:a2:0c (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC6m&#43;0iYo68rwVQDYDejkVvsvg22D8MN&#43;bNWMUEOWrhj 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.10 ((Debian)) | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-title: Site doesn&#39;t have a title (text/html). |_http-server-header: Apache/2.4.10 (Debian) 111/tcp open rpcbind syn-ack ttl 63 2-4 (RPC #100000) | rpcinfo: | program version port/proto service | 100000 2,3,4 111/tcp rpcbind | 100000 2,3,4 111/udp rpcbind | 100000 3,4 111/tcp6 rpcbind | 100000 3,4 111/udp6 rpcbind | 100024 1 39984/tcp status | 100024 1 44276/tcp6 status | 100024 1 45006/udp status |_ 100024 1 53318/udp6 status 6697/tcp open irc syn-ack ttl 63 UnrealIRCd 8067/tcp open irc syn-ack ttl 63 UnrealIRCd 39984/tcp open status syn-ack ttl 63 1 (RPC #100024) 65534/tcp open irc syn-ack ttl 63 UnrealIRCd Attack &#43; Enum Vectors TCP 111: RPCBind? TCP 80: HTTP Apache httpd 2.4.10 TCP 22: OpenSSH 6.7p1 Unknown:
+<meta name="description" content="
+https://www.hackthebox.com/machines/irked
+OS: Linux 10.129.8.83 Credentials: Username Password Notes/Hash nmap results: # Nmap 7.99 scan initiated Tue Jun 2 14:06:31 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Irked 10.129.8.83 Nmap scan report for 10.129.8.72 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-02 14:06:32 EDT for 26s Not shown: 65528 closed tcp ports (reset) PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 6.7p1 Debian 5&#43;deb8u4 (protocol 2.0) | ssh-hostkey: | 1024 6a:5d:f5:bd:cf:83:78:b6:75:31:9b:dc:79:c5:fd:ad (DSA) | ssh-dss AAAAB3NzaC1kc3MAAACBAI&#43;wKAAyWgx/P7Pe78y6/80XVTd6QEv6t5ZIpdzKvS8qbkChLB7LC&#43;/HVuxLshOUtac4oHr/IF9YBytBoaAte87fxF45o3HS9MflMA4511KTeNwc5QuhdHzqXX9ne0ypBAgFKECBUJqJ23Lp2S9KuYEYLzUhSdUEYqiZlcc65NspAAAAFQDwgf5Wh8QRu3zSvOIXTk&#43;5g0eTKQAAAIBQuTzKnX3nNfflt&#43;&#43;gnjAJ/dIRXW/KMPTNOSo730gLxMWVeId3geXDkiNCD/zo5XgMIQAWDXS&#43;0t0hlsH1BfrDzeEbGSgYNpXoz42RSHKtx7pYLG/hbUr4836olHrxLkjXCFuYFo9fCDs2/QsAeuhCPgEDjLXItW9ibfFqLxyP2QAAAIAE5MCdrGmT8huPIxPI&#43;bQWeQyKQI/lH32FDZb4xJBPrrqlk9wKWOa1fU2JZM0nrOkdnCPIjLeq9&#43;Db5WyZU2u3rdU8aWLZy8zF9mXZxuW/T3yXAV5whYa4QwqaVaiEzjcgRouex0ev/u&#43;y5vlIf4/SfAsiFQPzYKomDiBtByS9XA== | 2048 75:2e:66:bf:b9:3c:cc:f7:7e:84:8a:8b:f0:81:02:33 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDGASnp9kH4PwWZHx/V3aJjxLzjpiqc2FOyppTFp7/JFKcB9otDhh5kWgSrVDVijdsK95KcsEKC/R&#43;HJ9/P0KPdf4hDvjJXB1H3Th5/83gy/TEJTDJG16zXtyR9lPdBYg4n5hhfFWO1PxM9m41XlEuNgiSYOr&#43;uuEeLxzJb6ccq0VMnSvBd88FGnwpEoH1JYZyyTnnbwtBrXSz1tR5ZocJXU4DmI9pzTNkGFT&#43;Q/K6V/sdF73KmMecatgcprIENgmVSaiKh9mb&#43;4vEfWLIe0yZ97c2EdzF5255BalP3xHFAY0jROiBnUDSDlxyWMIcSymZPuE1N6Tu8nQ/pXxKvUar | 256 c8:a3:a2:5e:34:9a:c4:9b:90:53:f7:50:bf:ea:25:3b (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFeZigS1PimiXXJSqDy2KTT4UEEphoLAk8/ftEXUq0ihDOFDrpgT0Y4vYgYPXboLlPBKBc0nVBmKD&#43;6pvSwIEy8= | 256 8d:1b:43:c7:d0:1a:4c:05:cf:82:ed:c1:01:63:a2:0c (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC6m&#43;0iYo68rwVQDYDejkVvsvg22D8MN&#43;bNWMUEOWrhj 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.10 ((Debian)) | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-title: Site doesn&#39;t have a title (text/html). |_http-server-header: Apache/2.4.10 (Debian) 111/tcp open rpcbind syn-ack ttl 63 2-4 (RPC #100000) | rpcinfo: | program version port/proto service | 100000 2,3,4 111/tcp rpcbind | 100000 2,3,4 111/udp rpcbind | 100000 3,4 111/tcp6 rpcbind | 100000 3,4 111/udp6 rpcbind | 100024 1 39984/tcp status | 100024 1 44276/tcp6 status | 100024 1 45006/udp status |_ 100024 1 53318/udp6 status 6697/tcp open irc syn-ack ttl 63 UnrealIRCd 8067/tcp open irc syn-ack ttl 63 UnrealIRCd 39984/tcp open status syn-ack ttl 63 1 (RPC #100024) 65534/tcp open irc syn-ack ttl 63 UnrealIRCd Attack &#43; Enum Vectors TCP 111: RPCBind? TCP 80: HTTP Apache httpd 2.4.10 TCP 22: OpenSSH 6.7p1 Unknown:
 " />
 <meta name="keywords" content=", htb, easy, metasploit, fixing exploits, repeat" />
 <meta name="robots" content="noodp" />
@@ -16,7 +18,7 @@
 
     <title>
         
-            Irked :: Freedie | Pentration Testing Lab Writeups 
+            Irked :: Freedie | Penetration Testing Lab Writeups 
         
     </title>
 
@@ -36,15 +38,17 @@
 
 
   <meta itemprop="name" content="Irked">
-  <meta itemprop="description" content="10.129.8.83 OS: Credentials: Username Password Notes/Hash nmap results: # Nmap 7.99 scan initiated Tue Jun 2 14:06:31 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Irked 10.129.8.83 Nmap scan report for 10.129.8.72 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-02 14:06:32 EDT for 26s Not shown: 65528 closed tcp ports (reset) PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 6.7p1 Debian 5&#43;deb8u4 (protocol 2.0) | ssh-hostkey: | 1024 6a:5d:f5:bd:cf:83:78:b6:75:31:9b:dc:79:c5:fd:ad (DSA) | ssh-dss AAAAB3NzaC1kc3MAAACBAI&#43;wKAAyWgx/P7Pe78y6/80XVTd6QEv6t5ZIpdzKvS8qbkChLB7LC&#43;/HVuxLshOUtac4oHr/IF9YBytBoaAte87fxF45o3HS9MflMA4511KTeNwc5QuhdHzqXX9ne0ypBAgFKECBUJqJ23Lp2S9KuYEYLzUhSdUEYqiZlcc65NspAAAAFQDwgf5Wh8QRu3zSvOIXTk&#43;5g0eTKQAAAIBQuTzKnX3nNfflt&#43;&#43;gnjAJ/dIRXW/KMPTNOSo730gLxMWVeId3geXDkiNCD/zo5XgMIQAWDXS&#43;0t0hlsH1BfrDzeEbGSgYNpXoz42RSHKtx7pYLG/hbUr4836olHrxLkjXCFuYFo9fCDs2/QsAeuhCPgEDjLXItW9ibfFqLxyP2QAAAIAE5MCdrGmT8huPIxPI&#43;bQWeQyKQI/lH32FDZb4xJBPrrqlk9wKWOa1fU2JZM0nrOkdnCPIjLeq9&#43;Db5WyZU2u3rdU8aWLZy8zF9mXZxuW/T3yXAV5whYa4QwqaVaiEzjcgRouex0ev/u&#43;y5vlIf4/SfAsiFQPzYKomDiBtByS9XA== | 2048 75:2e:66:bf:b9:3c:cc:f7:7e:84:8a:8b:f0:81:02:33 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDGASnp9kH4PwWZHx/V3aJjxLzjpiqc2FOyppTFp7/JFKcB9otDhh5kWgSrVDVijdsK95KcsEKC/R&#43;HJ9/P0KPdf4hDvjJXB1H3Th5/83gy/TEJTDJG16zXtyR9lPdBYg4n5hhfFWO1PxM9m41XlEuNgiSYOr&#43;uuEeLxzJb6ccq0VMnSvBd88FGnwpEoH1JYZyyTnnbwtBrXSz1tR5ZocJXU4DmI9pzTNkGFT&#43;Q/K6V/sdF73KmMecatgcprIENgmVSaiKh9mb&#43;4vEfWLIe0yZ97c2EdzF5255BalP3xHFAY0jROiBnUDSDlxyWMIcSymZPuE1N6Tu8nQ/pXxKvUar | 256 c8:a3:a2:5e:34:9a:c4:9b:90:53:f7:50:bf:ea:25:3b (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFeZigS1PimiXXJSqDy2KTT4UEEphoLAk8/ftEXUq0ihDOFDrpgT0Y4vYgYPXboLlPBKBc0nVBmKD&#43;6pvSwIEy8= | 256 8d:1b:43:c7:d0:1a:4c:05:cf:82:ed:c1:01:63:a2:0c (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC6m&#43;0iYo68rwVQDYDejkVvsvg22D8MN&#43;bNWMUEOWrhj 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.10 ((Debian)) | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-title: Site doesn&#39;t have a title (text/html). |_http-server-header: Apache/2.4.10 (Debian) 111/tcp open rpcbind syn-ack ttl 63 2-4 (RPC #100000) | rpcinfo: | program version port/proto service | 100000 2,3,4 111/tcp rpcbind | 100000 2,3,4 111/udp rpcbind | 100000 3,4 111/tcp6 rpcbind | 100000 3,4 111/udp6 rpcbind | 100024 1 39984/tcp status | 100024 1 44276/tcp6 status | 100024 1 45006/udp status |_ 100024 1 53318/udp6 status 6697/tcp open irc syn-ack ttl 63 UnrealIRCd 8067/tcp open irc syn-ack ttl 63 UnrealIRCd 39984/tcp open status syn-ack ttl 63 1 (RPC #100024) 65534/tcp open irc syn-ack ttl 63 UnrealIRCd Attack &#43; Enum Vectors TCP 111: RPCBind? TCP 80: HTTP Apache httpd 2.4.10 TCP 22: OpenSSH 6.7p1 Unknown:">
+  <meta itemprop="description" content="https://www.hackthebox.com/machines/irked
+OS: Linux 10.129.8.83 Credentials: Username Password Notes/Hash nmap results: # Nmap 7.99 scan initiated Tue Jun 2 14:06:31 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Irked 10.129.8.83 Nmap scan report for 10.129.8.72 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-02 14:06:32 EDT for 26s Not shown: 65528 closed tcp ports (reset) PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 6.7p1 Debian 5&#43;deb8u4 (protocol 2.0) | ssh-hostkey: | 1024 6a:5d:f5:bd:cf:83:78:b6:75:31:9b:dc:79:c5:fd:ad (DSA) | ssh-dss AAAAB3NzaC1kc3MAAACBAI&#43;wKAAyWgx/P7Pe78y6/80XVTd6QEv6t5ZIpdzKvS8qbkChLB7LC&#43;/HVuxLshOUtac4oHr/IF9YBytBoaAte87fxF45o3HS9MflMA4511KTeNwc5QuhdHzqXX9ne0ypBAgFKECBUJqJ23Lp2S9KuYEYLzUhSdUEYqiZlcc65NspAAAAFQDwgf5Wh8QRu3zSvOIXTk&#43;5g0eTKQAAAIBQuTzKnX3nNfflt&#43;&#43;gnjAJ/dIRXW/KMPTNOSo730gLxMWVeId3geXDkiNCD/zo5XgMIQAWDXS&#43;0t0hlsH1BfrDzeEbGSgYNpXoz42RSHKtx7pYLG/hbUr4836olHrxLkjXCFuYFo9fCDs2/QsAeuhCPgEDjLXItW9ibfFqLxyP2QAAAIAE5MCdrGmT8huPIxPI&#43;bQWeQyKQI/lH32FDZb4xJBPrrqlk9wKWOa1fU2JZM0nrOkdnCPIjLeq9&#43;Db5WyZU2u3rdU8aWLZy8zF9mXZxuW/T3yXAV5whYa4QwqaVaiEzjcgRouex0ev/u&#43;y5vlIf4/SfAsiFQPzYKomDiBtByS9XA== | 2048 75:2e:66:bf:b9:3c:cc:f7:7e:84:8a:8b:f0:81:02:33 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDGASnp9kH4PwWZHx/V3aJjxLzjpiqc2FOyppTFp7/JFKcB9otDhh5kWgSrVDVijdsK95KcsEKC/R&#43;HJ9/P0KPdf4hDvjJXB1H3Th5/83gy/TEJTDJG16zXtyR9lPdBYg4n5hhfFWO1PxM9m41XlEuNgiSYOr&#43;uuEeLxzJb6ccq0VMnSvBd88FGnwpEoH1JYZyyTnnbwtBrXSz1tR5ZocJXU4DmI9pzTNkGFT&#43;Q/K6V/sdF73KmMecatgcprIENgmVSaiKh9mb&#43;4vEfWLIe0yZ97c2EdzF5255BalP3xHFAY0jROiBnUDSDlxyWMIcSymZPuE1N6Tu8nQ/pXxKvUar | 256 c8:a3:a2:5e:34:9a:c4:9b:90:53:f7:50:bf:ea:25:3b (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFeZigS1PimiXXJSqDy2KTT4UEEphoLAk8/ftEXUq0ihDOFDrpgT0Y4vYgYPXboLlPBKBc0nVBmKD&#43;6pvSwIEy8= | 256 8d:1b:43:c7:d0:1a:4c:05:cf:82:ed:c1:01:63:a2:0c (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC6m&#43;0iYo68rwVQDYDejkVvsvg22D8MN&#43;bNWMUEOWrhj 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.10 ((Debian)) | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-title: Site doesn&#39;t have a title (text/html). |_http-server-header: Apache/2.4.10 (Debian) 111/tcp open rpcbind syn-ack ttl 63 2-4 (RPC #100000) | rpcinfo: | program version port/proto service | 100000 2,3,4 111/tcp rpcbind | 100000 2,3,4 111/udp rpcbind | 100000 3,4 111/tcp6 rpcbind | 100000 3,4 111/udp6 rpcbind | 100024 1 39984/tcp status | 100024 1 44276/tcp6 status | 100024 1 45006/udp status |_ 100024 1 53318/udp6 status 6697/tcp open irc syn-ack ttl 63 UnrealIRCd 8067/tcp open irc syn-ack ttl 63 UnrealIRCd 39984/tcp open status syn-ack ttl 63 1 (RPC #100024) 65534/tcp open irc syn-ack ttl 63 UnrealIRCd Attack &#43; Enum Vectors TCP 111: RPCBind? TCP 80: HTTP Apache httpd 2.4.10 TCP 22: OpenSSH 6.7p1 Unknown:">
   <meta itemprop="datePublished" content="2026-06-02T22:49:13-04:00">
   <meta itemprop="dateModified" content="2026-06-02T22:49:13-04:00">
-  <meta itemprop="wordCount" content="1620">
+  <meta itemprop="wordCount" content="1622">
   <meta itemprop="keywords" content="Htb,Easy,Metasploit,Fixing Exploits,Repeat">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Irked">
-  <meta name="twitter:description" content="10.129.8.83 OS: Credentials: Username Password Notes/Hash nmap results: # Nmap 7.99 scan initiated Tue Jun 2 14:06:31 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Irked 10.129.8.83 Nmap scan report for 10.129.8.72 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-02 14:06:32 EDT for 26s Not shown: 65528 closed tcp ports (reset) PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 6.7p1 Debian 5&#43;deb8u4 (protocol 2.0) | ssh-hostkey: | 1024 6a:5d:f5:bd:cf:83:78:b6:75:31:9b:dc:79:c5:fd:ad (DSA) | ssh-dss AAAAB3NzaC1kc3MAAACBAI&#43;wKAAyWgx/P7Pe78y6/80XVTd6QEv6t5ZIpdzKvS8qbkChLB7LC&#43;/HVuxLshOUtac4oHr/IF9YBytBoaAte87fxF45o3HS9MflMA4511KTeNwc5QuhdHzqXX9ne0ypBAgFKECBUJqJ23Lp2S9KuYEYLzUhSdUEYqiZlcc65NspAAAAFQDwgf5Wh8QRu3zSvOIXTk&#43;5g0eTKQAAAIBQuTzKnX3nNfflt&#43;&#43;gnjAJ/dIRXW/KMPTNOSo730gLxMWVeId3geXDkiNCD/zo5XgMIQAWDXS&#43;0t0hlsH1BfrDzeEbGSgYNpXoz42RSHKtx7pYLG/hbUr4836olHrxLkjXCFuYFo9fCDs2/QsAeuhCPgEDjLXItW9ibfFqLxyP2QAAAIAE5MCdrGmT8huPIxPI&#43;bQWeQyKQI/lH32FDZb4xJBPrrqlk9wKWOa1fU2JZM0nrOkdnCPIjLeq9&#43;Db5WyZU2u3rdU8aWLZy8zF9mXZxuW/T3yXAV5whYa4QwqaVaiEzjcgRouex0ev/u&#43;y5vlIf4/SfAsiFQPzYKomDiBtByS9XA== | 2048 75:2e:66:bf:b9:3c:cc:f7:7e:84:8a:8b:f0:81:02:33 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDGASnp9kH4PwWZHx/V3aJjxLzjpiqc2FOyppTFp7/JFKcB9otDhh5kWgSrVDVijdsK95KcsEKC/R&#43;HJ9/P0KPdf4hDvjJXB1H3Th5/83gy/TEJTDJG16zXtyR9lPdBYg4n5hhfFWO1PxM9m41XlEuNgiSYOr&#43;uuEeLxzJb6ccq0VMnSvBd88FGnwpEoH1JYZyyTnnbwtBrXSz1tR5ZocJXU4DmI9pzTNkGFT&#43;Q/K6V/sdF73KmMecatgcprIENgmVSaiKh9mb&#43;4vEfWLIe0yZ97c2EdzF5255BalP3xHFAY0jROiBnUDSDlxyWMIcSymZPuE1N6Tu8nQ/pXxKvUar | 256 c8:a3:a2:5e:34:9a:c4:9b:90:53:f7:50:bf:ea:25:3b (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFeZigS1PimiXXJSqDy2KTT4UEEphoLAk8/ftEXUq0ihDOFDrpgT0Y4vYgYPXboLlPBKBc0nVBmKD&#43;6pvSwIEy8= | 256 8d:1b:43:c7:d0:1a:4c:05:cf:82:ed:c1:01:63:a2:0c (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC6m&#43;0iYo68rwVQDYDejkVvsvg22D8MN&#43;bNWMUEOWrhj 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.10 ((Debian)) | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-title: Site doesn&#39;t have a title (text/html). |_http-server-header: Apache/2.4.10 (Debian) 111/tcp open rpcbind syn-ack ttl 63 2-4 (RPC #100000) | rpcinfo: | program version port/proto service | 100000 2,3,4 111/tcp rpcbind | 100000 2,3,4 111/udp rpcbind | 100000 3,4 111/tcp6 rpcbind | 100000 3,4 111/udp6 rpcbind | 100024 1 39984/tcp status | 100024 1 44276/tcp6 status | 100024 1 45006/udp status |_ 100024 1 53318/udp6 status 6697/tcp open irc syn-ack ttl 63 UnrealIRCd 8067/tcp open irc syn-ack ttl 63 UnrealIRCd 39984/tcp open status syn-ack ttl 63 1 (RPC #100024) 65534/tcp open irc syn-ack ttl 63 UnrealIRCd Attack &#43; Enum Vectors TCP 111: RPCBind? TCP 80: HTTP Apache httpd 2.4.10 TCP 22: OpenSSH 6.7p1 Unknown:">
+  <meta name="twitter:description" content="https://www.hackthebox.com/machines/irked
+OS: Linux 10.129.8.83 Credentials: Username Password Notes/Hash nmap results: # Nmap 7.99 scan initiated Tue Jun 2 14:06:31 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Irked 10.129.8.83 Nmap scan report for 10.129.8.72 Host is up, received echo-reply ttl 63 (0.018s latency). Scanned at 2026-06-02 14:06:32 EDT for 26s Not shown: 65528 closed tcp ports (reset) PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack ttl 63 OpenSSH 6.7p1 Debian 5&#43;deb8u4 (protocol 2.0) | ssh-hostkey: | 1024 6a:5d:f5:bd:cf:83:78:b6:75:31:9b:dc:79:c5:fd:ad (DSA) | ssh-dss AAAAB3NzaC1kc3MAAACBAI&#43;wKAAyWgx/P7Pe78y6/80XVTd6QEv6t5ZIpdzKvS8qbkChLB7LC&#43;/HVuxLshOUtac4oHr/IF9YBytBoaAte87fxF45o3HS9MflMA4511KTeNwc5QuhdHzqXX9ne0ypBAgFKECBUJqJ23Lp2S9KuYEYLzUhSdUEYqiZlcc65NspAAAAFQDwgf5Wh8QRu3zSvOIXTk&#43;5g0eTKQAAAIBQuTzKnX3nNfflt&#43;&#43;gnjAJ/dIRXW/KMPTNOSo730gLxMWVeId3geXDkiNCD/zo5XgMIQAWDXS&#43;0t0hlsH1BfrDzeEbGSgYNpXoz42RSHKtx7pYLG/hbUr4836olHrxLkjXCFuYFo9fCDs2/QsAeuhCPgEDjLXItW9ibfFqLxyP2QAAAIAE5MCdrGmT8huPIxPI&#43;bQWeQyKQI/lH32FDZb4xJBPrrqlk9wKWOa1fU2JZM0nrOkdnCPIjLeq9&#43;Db5WyZU2u3rdU8aWLZy8zF9mXZxuW/T3yXAV5whYa4QwqaVaiEzjcgRouex0ev/u&#43;y5vlIf4/SfAsiFQPzYKomDiBtByS9XA== | 2048 75:2e:66:bf:b9:3c:cc:f7:7e:84:8a:8b:f0:81:02:33 (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDGASnp9kH4PwWZHx/V3aJjxLzjpiqc2FOyppTFp7/JFKcB9otDhh5kWgSrVDVijdsK95KcsEKC/R&#43;HJ9/P0KPdf4hDvjJXB1H3Th5/83gy/TEJTDJG16zXtyR9lPdBYg4n5hhfFWO1PxM9m41XlEuNgiSYOr&#43;uuEeLxzJb6ccq0VMnSvBd88FGnwpEoH1JYZyyTnnbwtBrXSz1tR5ZocJXU4DmI9pzTNkGFT&#43;Q/K6V/sdF73KmMecatgcprIENgmVSaiKh9mb&#43;4vEfWLIe0yZ97c2EdzF5255BalP3xHFAY0jROiBnUDSDlxyWMIcSymZPuE1N6Tu8nQ/pXxKvUar | 256 c8:a3:a2:5e:34:9a:c4:9b:90:53:f7:50:bf:ea:25:3b (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFeZigS1PimiXXJSqDy2KTT4UEEphoLAk8/ftEXUq0ihDOFDrpgT0Y4vYgYPXboLlPBKBc0nVBmKD&#43;6pvSwIEy8= | 256 8d:1b:43:c7:d0:1a:4c:05:cf:82:ed:c1:01:63:a2:0c (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC6m&#43;0iYo68rwVQDYDejkVvsvg22D8MN&#43;bNWMUEOWrhj 80/tcp open http syn-ack ttl 63 Apache httpd 2.4.10 ((Debian)) | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS |_http-title: Site doesn&#39;t have a title (text/html). |_http-server-header: Apache/2.4.10 (Debian) 111/tcp open rpcbind syn-ack ttl 63 2-4 (RPC #100000) | rpcinfo: | program version port/proto service | 100000 2,3,4 111/tcp rpcbind | 100000 2,3,4 111/udp rpcbind | 100000 3,4 111/tcp6 rpcbind | 100000 3,4 111/udp6 rpcbind | 100024 1 39984/tcp status | 100024 1 44276/tcp6 status | 100024 1 45006/udp status |_ 100024 1 53318/udp6 status 6697/tcp open irc syn-ack ttl 63 UnrealIRCd 8067/tcp open irc syn-ack ttl 63 UnrealIRCd 39984/tcp open status syn-ack ttl 63 1 (RPC #100024) 65534/tcp open irc syn-ack ttl 63 UnrealIRCd Attack &#43; Enum Vectors TCP 111: RPCBind? TCP 80: HTTP Apache httpd 2.4.10 TCP 22: OpenSSH 6.7p1 Unknown:">
 
 
 
@@ -60,6 +64,10 @@
 
 
 <style>
+   
+  body .container { justify-content: flex-start !important; }
+
+   
   pre {
     overflow-x: auto;
     padding: 1rem 1.25rem;
@@ -70,6 +78,7 @@
   pre code { white-space: pre; }
   code { padding: 0.15rem 0.35rem; border-radius: 4px; font-size: 0.88em; }
   
+   
   .code-toolbar .toolbar { display: none !important; }
 
   .copy-btn {
@@ -86,6 +95,17 @@
     opacity: 0;
     transition: opacity 0.15s;
   }
+
+   
+  :not(pre) > code {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e6e6e6;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.88em;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  }
+
   pre:hover .copy-btn { opacity: 1; }
   .copy-btn:hover { background: rgba(255,255,255,0.2); }
 </style>
@@ -195,9 +215,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 
 
                 <div class="post-content">
-                    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>10.129.8.83
-</span></span></code></pre></div><h1 id="os">OS:</h1>
-<h1 id="credentials">Credentials:</h1>
+                    <p><img src="https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/5fb846e75cf0db0c4b27e2dc64a9bf82.png" alt=""></p>
+<p><a href="https://www.hackthebox.com/machines/irked">https://www.hackthebox.com/machines/irked</a></p>
+<h2 id="os-linux">OS: Linux</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>10.129.8.83
+</span></span></code></pre></div><h2 id="credentials">Credentials:</h2>
 <table>
   <thead>
       <tr>
@@ -210,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
   </tbody>
 </table>
 <hr>
-<h1 id="nmap-results"><code>nmap</code> results:</h1>
+<h2 id="nmap-results"><code>nmap</code> results:</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Nmap 7.99 scan initiated Tue Jun  2 14:06:31 2026 as: /usr/lib/nmap/nmap -p- --open -sC -sV -A -vv -oA nmap/Irked 10.129.8.83
 </span></span><span style="display:flex;"><span>Nmap scan report for 10.129.8.72
 </span></span><span style="display:flex;"><span>Host is up, received echo-reply ttl 63 (0.018s latency).
@@ -248,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </span></span><span style="display:flex;"><span>39984/tcp open  status  syn-ack ttl 63 1 (RPC #100024)
 </span></span><span style="display:flex;"><span>65534/tcp open  irc     syn-ack ttl 63 UnrealIRCd
 </span></span></code></pre></div><hr>
-<h1 id="attack--enum-vectors">Attack + Enum Vectors</h1>
+<h2 id="attack--enum-vectors">Attack + Enum Vectors</h2>
 <ul>
 <li>TCP 111: RPCBind?</li>
 <li>TCP 80: HTTP Apache httpd 2.4.10</li>
@@ -261,12 +283,12 @@ document.addEventListener('DOMContentLoaded', function () {
 <li>TCP 65534: irc?</li>
 <li>TCP 39984: rpc status?</li>
 </ul>
-<h2 id="udp-161-snmp">UDP (161 SNMP)?</h2>
+<h3 id="udp-161-snmp">UDP (161 SNMP)?</h3>
 <ul>
 <li>UDP 161: SNMP closed</li>
 </ul>
 <hr>
-<h1 id="service-enum-notes">Service Enum Notes:</h1>
+<h2 id="service-enum-notes">Service Enum Notes:</h2>
 <p>RPCBind: yields nothing interesting trying the enumeration methodology from: <a href="https://hackviser.com/tactics/pentesting/services/rpcbind">https://hackviser.com/tactics/pentesting/services/rpcbind</a></p>
 <h3 id="web-service-gobuster--fuff">Web Service: <code>Gobuster</code> / <code>fuff</code></h3>
 <p>going to:</p>
@@ -329,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </span></span><span style="display:flex;"><span>15:05 -!- | UnrealIRCd Homepage: http://www.unrealircd.com
 </span></span><span style="display:flex;"><span>15:05 -!- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 </span></span></code></pre></div><hr>
-<h1 id="initial-foothold">Initial Foothold</h1>
+<h2 id="initial-foothold">Initial Foothold</h2>
 <p>So we found <code>UnrealIRCd 3.2.8.1</code> as version number, let&rsquo;s see if there are exploits</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>searchsploit unreal 3.2.8.1
 </span></span></code></pre></div><p>appearantly there is an exploit on metasploit? I haven&rsquo;t used this in a while so good time to practice after OSCP: let&rsquo;s run metasploit</p>
@@ -363,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>stty rows 48 cols 210
 </span></span></code></pre></div><p>we got a fully upgraded stabilized shell</p>
 <hr>
-<h1 id="priv-esc">Priv Esc</h1>
+<h2 id="priv-esc">Priv Esc</h2>
 <p>So we are in the <code>Unreal3.2</code> directory: searching google on <code>UnrealIRC config file</code>: and we know the config file is <code>unrealircd.conf</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cat unrealircd.conf | grep -i &#34;pass&#34;
 </span></span></code></pre></div><p>we got a few password looking passes, let&rsquo;s save them:</p>
@@ -392,7 +414,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </span></span></code></pre></div><p>We got root shell!</p>
 <p>Therefore pwn&rsquo;d</p>
 <hr>
-<h1 id="conclusion--remediation">Conclusion &amp; Remediation</h1>
+<h2 id="conclusion--remediation">Conclusion &amp; Remediation</h2>
 <p>In this box we get to learn about how to enumerate <code>IRC</code> and using exploits to gain reverse shell. Lastly, since there is a misconfigured SUID bit program we get to abuse it and obtain root.</p>
 <p>To remediate, system administrators should upgrade their outdated <code>UnrealIRCd</code> to the newest version. If cannot update, at least prevent any user from executing the <code>/info</code> command to gett the version banner. In addition, there shouldn&rsquo;t be any SUID programs that is owned by root to execute a program in <code>/tmp</code> that has not been created.</p>
 <h3 id="other-resources-for-the-box">Other Resources for the box</h3>

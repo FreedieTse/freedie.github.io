@@ -3,20 +3,20 @@ date = '2026-06-03T10:50:00-04:00'
 title = 'Bashed'
 tags = ["htb", "easy","sudo","cronjobs"]
 +++
+![](https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/0f058b73659ca043de9f5240abd651ca.png)
 
+https://www.hackthebox.com/machines/Bashed
+## OS:  Ubuntu
 ``` IP
 10.129.186.17
 ```
-# OS:  Ubuntu
-# Credentials:
+## Credentials:
 
 | Username | Password |
 | -------- | -------- |
 
-
 ---
-# `nmap` results:
-
+## `nmap` results:
 ```
 80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu))
 |_http-favicon: Unknown favicon MD5: 6AA5034A553DFA77C3B2C7B4C26CF870
@@ -30,12 +30,12 @@ OS CPE: cpe:/o:linux:linux_kernel:3 cpe
 ```
 
 ---
-# Attack + Enum Vectors: (Ports, etc.)
+## Attack + Enum Vectors: (Ports, etc.)
 - TCP 80: HTTP
 
 ---
-# Web Service Enum:
-## `Gobuster` / `wfuzz`
+## Web Service Enum:
+### `Gobuster` / `wfuzz`
 after enuming with gobuster: we found a `/dev` directory with web shell
 ```
 http://10.129.186.17/dev/phpbash.min.php
@@ -47,7 +47,7 @@ http://10.129.186.17/dev/phpbash.php
 
 
 ---
-# Initial Foothold
+## Initial Foothold
 ```
 http://10.129.186.17/dev/phpbash.php
 ```
@@ -56,7 +56,7 @@ then we visited that on browser and caught a shell
 now we try to privilege escalate
 
 ---
-# Priv Esc
+## Priv Esc
 First we transfer pspy64 to target: we found a cron job running the python script under scripts file
 
 we first lateral move to scriptmanager using 

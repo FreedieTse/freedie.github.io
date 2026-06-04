@@ -1,6 +1,6 @@
 baseURL = 'https://freedie.org/'
 languageCode = 'en-us'
-title = 'Freedie | Pentration Testing Lab Writeups'
+title = 'Freedie | Penetration Testing Lab Writeups'
 theme = 'hugo-theme-hello-friend-ng'
 
 [[params.social]]
