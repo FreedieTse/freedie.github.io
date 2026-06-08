@@ -5,6 +5,7 @@ title = 'HTB Writeups'
 
 ### Easy Boxes
 - [Bashed](/htb-writeups/bashed): Linux
+- [Devvortex](/htb-writeups/devvortex): Linux
 - [Help](/htb-writeups/help): Linux
 - [Irked](/htb-writeups/irked): Linux
 - [Nibbles](/htb-writeups/nibbles): Linux
