@@ -9,6 +9,7 @@ title = 'HTB Writeups'
 - [Help](/htb-writeups/help): Linux
 - [Irked](/htb-writeups/irked): Linux
 - [Nibbles](/htb-writeups/nibbles): Linux
+- [Precious](/htb-writeups/precious): Linux
 - [SwagShop](/htb-writeups/swagshop): Linux
 
 ### Medium Boxes
