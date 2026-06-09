@@ -48,7 +48,7 @@ PORT   STATE SERVICE REASON         VERSION
 - TCP 22: SSH OpenSSH 8.4p1
 
 ### UDP (161 SNMP)?
-- 
+- closed
 
 
 ---
