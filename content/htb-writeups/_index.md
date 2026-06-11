@@ -10,6 +10,7 @@ title = 'HTB Writeups'
 - [Help](/htb-writeups/help): Linux
 - [Irked](/htb-writeups/irked): Linux
 - [Nibbles](/htb-writeups/nibbles): Linux
+- [OpenAdmin](/htb-writeups/openadmin): Linux
 - [Precious](/htb-writeups/precious): Linux
 - [Pilgrimage](/htb-writeups/pilgrimage): Linux
 - [SwagShop](/htb-writeups/swagshop): Linux
