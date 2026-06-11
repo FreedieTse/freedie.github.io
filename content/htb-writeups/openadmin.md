@@ -1,6 +1,6 @@
 +++
 date = '2026-06-01T23:49:11-04:00'
-title = 'Help'
+title = 'OpenAdmin'
 tags = ["htb", "easy", "password attack","nano","internal pivot"]
 +++
 
@@ -472,4 +472,4 @@ Therefore, pwn'd.
 ## Conclusion & Remediation
 In my personal opinion, I really liked this box as it challenges password attacks of people trying to solve the box. The enumerations weren't too complicated but the review on spraying passwords on every single user and service is still a very valid and important concepts.
 
-To remediate from similiar attacks assembled in this lab: system administrators must update their outdated web services to the earliest, or at least try to implement access control and hide it from normal users if updating cannot be done immediately. In addition, users should not be using the same password they have on one service as their own user's log in password. Similarly, passwords should create as complicated and complex as possible to prevent attackers from easily gaining access by brute forcing hashes if they did gain access.
+To remediate from similiar attacks assembled in this lab: system administrators must update their outdated web services to the earliest, or at least try to implement access control and hide it from normal users if updating cannot be done immediately. In addition, users should not be using the same password they have on one service as their own user's log in password. Similarly, passwords should create as complicated and complex as possible to prevent attackers from easily gaining access by brute forcing hashes if they did gain access. Lastly, misconfigured `sudo` privileges needs to be removed following the principle of least privileges.

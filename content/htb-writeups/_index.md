@@ -5,6 +5,7 @@ title = 'HTB Writeups'
 
 ### Easy Boxes
 - [Bashed](/htb-writeups/bashed): Linux
+- [Broker](/htb-writeups/broker): Linux
 - [CozyHosting](/htb-writeups/cozyhosting): Linux
 - [Devvortex](/htb-writeups/devvortex): Linux
 - [Help](/htb-writeups/help): Linux

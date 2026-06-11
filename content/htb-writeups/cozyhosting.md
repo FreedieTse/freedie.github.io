@@ -1,6 +1,6 @@
 +++
 date = '2026-06-09T14:39:40-04:00'
-title = 'Cozyhosting'
+title = 'CozyHosting'
 tags = ["htb", "easy", "command injection","sudo","postgresql","spring boot"]
 +++
 
