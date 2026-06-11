@@ -20,6 +20,7 @@ title = 'HTB Writeups'
 - [Precious](/htb-writeups/precious): Linux
 - [Pilgrimage](/htb-writeups/pilgrimage): Linux
 - [SwagShop](/htb-writeups/swagshop): Linux
+- [Sunday](/htb-writeups/sunday): Linux
 
 ### Medium Boxes
 To be added
