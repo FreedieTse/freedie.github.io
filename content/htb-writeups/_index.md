@@ -14,6 +14,7 @@ title = 'HTB Writeups'
 - [Irked](/htb-writeups/irked): Linux
 - [Nibbles](/htb-writeups/nibbles): Linux
 - [OpenAdmin](/htb-writeups/openadmin): Linux
+- [Pandora](/htb-writeups/pandora): Linux
 - [Precious](/htb-writeups/precious): Linux
 - [Pilgrimage](/htb-writeups/pilgrimage): Linux
 - [SwagShop](/htb-writeups/swagshop): Linux
