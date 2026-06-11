@@ -7,6 +7,7 @@ title = 'HTB Writeups'
 - [Bashed](/htb-writeups/bashed): Linux
 - [BoardLight](/htb-writeups/boardlight): Linux
 - [Broker](/htb-writeups/broker): Linux
+- [Codify](/htb-writeups/codify): Linux
 - [CozyHosting](/htb-writeups/cozyhosting): Linux
 - [Devvortex](/htb-writeups/devvortex): Linux
 - [Help](/htb-writeups/help): Linux
