@@ -12,6 +12,7 @@ title = 'HTB Writeups'
 - [CozyHosting](/htb-writeups/cozyhosting): Linux
 - [Devvortex](/htb-writeups/devvortex): Linux
 - [Editor](/htb-writeups/editor): Linux
+- [Editorial](/htb-writeups/editorial): Linux
 - [Help](/htb-writeups/help): Linux
 - [Irked](/htb-writeups/irked): Linux
 - [Nibbles](/htb-writeups/nibbles): Linux
