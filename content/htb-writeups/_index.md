@@ -15,6 +15,7 @@ title = 'HTB Writeups'
 - [Editorial](/htb-writeups/editorial): Linux
 - [Help](/htb-writeups/help): Linux
 - [Irked](/htb-writeups/irked): Linux
+- [LinkVortex](/htb-writeups/linkvortex): Linux
 - [Nibbles](/htb-writeups/nibbles): Linux
 - [OpenAdmin](/htb-writeups/openadmin): Linux
 - [Pandora](/htb-writeups/pandora): Linux
