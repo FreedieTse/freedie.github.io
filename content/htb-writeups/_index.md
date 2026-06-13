@@ -3,6 +3,9 @@ date = '2026-05-28T20:50:11-04:00'
 title = 'HTB Writeups'
 +++
 
+### Very Easy Boxes
+To be added
+
 ### Easy Boxes
 - [Bashed](/htb-writeups/bashed): Linux
 - [BoardLight](/htb-writeups/boardlight): Linux
@@ -23,6 +26,7 @@ title = 'HTB Writeups'
 - [Pilgrimage](/htb-writeups/pilgrimage): Linux
 - [SwagShop](/htb-writeups/swagshop): Linux
 - [Sunday](/htb-writeups/sunday): Linux
+- [Tabby](/htb-writeups/tabby): Linux
 
 ### Medium Boxes
 To be added
